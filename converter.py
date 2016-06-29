@@ -89,7 +89,7 @@ def get_target_index(source_id, edge):
     answer_label = '0'
     if question_type == 'slider':    
          
-        minmax = crop_text.replace(' ','').replace('[', '').replace(']','')
+        minmax = text.replace(' ','').replace('[', '').replace(']','')
         minmax = minmax.split(',')
         if edge['label'] != '':
             all_edges = graph['edges']
@@ -132,20 +132,30 @@ def get_target_index(source_id, edge):
 
 
     if question_type == ('mc' or 'ms'): #eventually change this to properly accoutn for ms
-        answer_text = crop_text.replace('[', '').replace(']', '')
-        answers = answer_text.split(',')
-        if question_type == 'mc':
-            if 'label' in edge.keys():
-                for i in range(len(answers)):
-                    if edge['label'].lower().replace(' ', '') == answers[i].lower().replace(' ', ''):
-                        answer_label = str(i)
-            else:
+        if '[' in text:
+                    
+            start_index = text.index('[')
+            text = text[start_index:]
+            
+            answer_text = text.replace('[', '').replace(']', '')
+            answers = answer_text.split(',')
+            if question_type == 'mc':
+                if 'label' in edge.keys():
+                    for i in range(len(answers)):
+                        if edge['label'].lower().strip().replace('[','').replace(']','') == answers[i].lower().strip():
+                            print('MATCH ' + edge['label'].lower().strip())
+                            answer_label = str(i)
+                        else:
+
+                            print('NO MATCH ' + edge['label'].lower().strip() + ' | ' + answers[i].lower().strip())
+                else:
+                    answer_label = '0'
+
+            else: #is ms.... we aren't handling these yet
                 answer_label = '0'
 
-        else: #is ms.... we aren't handling these yet
-            answer_label = '0'
-
-            
+        else:
+             print('NO ANSWERS FOR: ' + str(source_node)) 
         
         
     return answer_label
