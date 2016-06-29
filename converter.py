@@ -42,7 +42,7 @@ for condition in condition2roots.keys():
 
 def build_from_root(id):
     tree = []
-    print('Building tree for condition: ' + root2condition[id])
+
     sources_to_explore = [id]
     while len(sources_to_explore) > 0:
         current_source = sources_to_explore.pop()
@@ -61,9 +61,9 @@ def build_from_root(id):
       
     return tree
 def get_target_index(source_id, edge):
-    print('EDGE : ' + str(edge))
+   
     source_node = id2node[source_id]
-    print('SOURCE NODE TEXT: ' + source_node['text'])
+    
     
     question_type = ''
     
@@ -77,7 +77,6 @@ def get_target_index(source_id, edge):
         question_type = 'text'
     if '[test]' in source_node['text'].lower():
         question_type = 'test'
-    print('QUESTION TYPE: ' + question_type)
     for i in range(0, 2):   
         text = source_node['text']  
         crop_start = text.index('[')
@@ -143,11 +142,11 @@ def get_target_index(source_id, edge):
                 if 'label' in edge.keys():
                     for i in range(len(answers)):
                         if edge['label'].lower().strip().replace('[','').replace(']','') == answers[i].lower().strip():
-                            print('MATCH ' + edge['label'].lower().strip())
-                            answer_label = str(i)
-                        else:
 
-                            print('NO MATCH ' + edge['label'].lower().strip() + ' | ' + answers[i].lower().strip())
+                            answer_label = str(i)
+ 
+
+  
                 else:
                     answer_label = '0'
 
@@ -162,10 +161,11 @@ def get_target_index(source_id, edge):
 
 for id in id_is_root.keys():
     if id_is_root[id]:
-        print('Beginning tree build for ' +  root2condition[id])
+
         trees[root2condition[id]] = build_from_root(id)
         num_conditions = len(id2condition.keys())
 
 print(str(num_conditions) + ' conditions found in graph.')
 print(str(num_roots) + ' roots found in graph.')
 print(str(len(graph['nodes'])) + ' nodes found in graph.')
+print(str(len(trees.keys())) + ' decision trees made.')
