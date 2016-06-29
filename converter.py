@@ -9,7 +9,8 @@ id2condition = {}
 id_is_root = {}
 id2node = {}
 condition2roots = {}
-
+root2condition = {}
+trees = {}
 
 
 for i in range(len(graph['nodes'])):
@@ -32,29 +33,34 @@ for edge in graph['edges']:
             condition_roots += [edge['targetId']]
             condition2roots[id2condition[edge['sourceId']]] = condition_roots
         num_roots += 1
-tree = []
-for id in id_is_root.keys():
-    if id_is_root[id]:
-        tree.append(build_from_root(id)) 
 
+for condition in condition2roots.keys():
+    roots = condition2roots[condition]
+    for root in roots:
+       root2condition[root] = condition
+        
 
-
-num_conditions = len(id2condition.keys())
-
-print(str(num_conditions) + ' conditions found in graph.')
-print(str(num_roots) + ' roots found in graph.')
-print(str(len(graph['nodes'])) + ' nodes found in graph.')
-
-func build_from_root(id):
+def build_from_root(id):
     tree = []
-    current_source = id
-    current_fragment = [id]
-    for edge in graph['edges']:
-        if edge['sourceId'] == current_source:
-            current_fragement += [edge['targetId']]
+    sources_to_explore = [id]
+    while len(sources_to_explore) > 0:
+        current_source = sources_to_explore.pop()
+        current_fragment = [current_source]
+        for edge in graph['edges']:
+            if edge['sourceId'] == current_source:
 
-func get_target_index(source_id, edge):
+                current_fragment += [edge['targetId']]
+                current_fragment += get_target_index(current_source, edge)
+                sources_to_explore += [edge['targetId']]
+        if len(current_fragment) == 1:
+            current_fragment += ['<none>', '<none>']
+        tree += [current_fragment]
+
+def get_target_index(source_id, edge):
+    print('EDGE : ' + str(edge))
     source_node = id2node[source_id]
+    print('SOURCE NODE TEXT: ' + source_node['text'])
+    
     question_type = ''
     
     if '[mc]' in source_node['text'].lower():
@@ -67,6 +73,7 @@ func get_target_index(source_id, edge):
         question_type = 'text'
     if '[test]' in source_node['text'].lower():
         question_type = 'test'
+    print('QUESTION TYPE: ' + question_type)
     for i in range(0, 2):   
         text = source_node['text']  
         crop_start = text.index('[')
@@ -76,14 +83,46 @@ func get_target_index(source_id, edge):
     
 
     answer_label = '0'
-    if question_type == 'slider'    
-        cutoffs = crop_text.replace(' ','').replace('[', '').replace(']','')
-        cutoffs = cutoffs.split(',')
-        all_edges = graph['edges']
-        other_answers = []
-        for other_edge in all_edges:
-            if other_edge['source_id'] == source_id:
-                other_answers.append(other_edge['label'])
+    if question_type == 'slider':    
+         
+        minmax = crop_text.replace(' ','').replace('[', '').replace(']','')
+        minmax = minmax.split(',')
+        if edge['label'] != '':
+            all_edges = graph['edges']
+            other_answers = []
+            other_ranges = []
+            for other_edge in all_edges:
+                if other_edge['sourceId'] == source_id:
+                    if other_edge['label'] != '':
+                        other_answers.append(other_edge['label'])
+            for answer_set in other_answers:
+                start_index = answer_set.index('(') + 1
+                end_index = answer_set.index(')')
+                other_ranges += [answer_set[start_index:end_index].replace(' ', '').split(',')]
+            for i in range(0,len(other_ranges)):
+                other_range = other_ranges[i]
+                for j in range(0, len(other_range)):
+                    other_range[j] = int(other_range[j])
+                other_ranges[i] = other_range
+            other_ranges = sorted(other_ranges, key = lambda other_range:other_range[0])
+            
+            edge_range = edge['label']
+            start_index = edge_range.index('(') + 1
+            end_index = edge_range.index(')') 
+            edge_range = edge_range[start_index:end_index].replace(' ', '').split(',')
+            for i in range(len(edge_range)):
+                value = int(edge_range[i])
+                edge_range[i] = value
+            for i in range(len(other_ranges)):
+                other_range = other_ranges[i]
+                if other_range == edge_range:
+                    answer_label = str(i)
+        else:
+            answer_label = '0'
+
+
+        
+
 
         ###look through other answers to determine proper [min, max, cutoff], and cutoff idex for this question
 
@@ -92,13 +131,25 @@ func get_target_index(source_id, edge):
         answer_text = crop_text.replace('[', '').replace(']', '')
         answers = answer_text.split(',')
         if question_type == 'mc':
-            for i in range(len(answers)):
-                if edge['label'].lower().replace(' ', '') == answers[i].lower().replace(' ', ''):
-                    answer_label = str(i)
-        else: #is ms.... we ren't handling these yet
+            if 'label' in edge.keys():
+                for i in range(len(answers)):
+                    if edge['label'].lower().replace(' ', '') == answers[i].lower().replace(' ', ''):
+                        answer_label = str(i)
+            else:
+                answer_label = '0'
+
+        else: #is ms.... we aren't handling these yet
             answer_label = '0'
 
             
         
         
+    return answer_label
 
+for id in id_is_root.keys():
+    if id_is_root[id]:
+        trees[root2condition[root]] = build_from_root(id)
+        num_conditions = len(id2condition.keys())
+print(str(num_conditions) + ' conditions found in graph.')
+print(str(num_roots) + ' roots found in graph.')
+print(str(len(graph['nodes'])) + ' nodes found in graph.')
