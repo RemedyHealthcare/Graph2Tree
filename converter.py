@@ -11,6 +11,7 @@ id2node = {}
 condition2roots = {}
 root2condition = {}
 trees = {}
+questions = {}
 
 
 for i in range(len(graph['nodes'])):
@@ -20,6 +21,44 @@ for i in range(len(graph['nodes'])):
     if 'onditions/' in node['text']:
         id = node['id']
         id2condition[id] = node['text'].lower()
+
+for i in range(len(graph['nodes'])):
+    node = graph['nodes'][i]
+    if node['id'] not in id2condition.keys():
+        question = {}
+        question_text = node['text']
+
+        if '[' in question_text:
+            print(question_text)
+            start_index = question_text.index(']') + 1
+            question_type = question_text[:start_index]
+            question_type = question_type[1:-1].lower()
+            if question_type == ('mc' or 'ms'):
+                question_type_string = 'button'
+            if question_type == 'slider':
+                question_type_string = 'slider'
+            else: 
+                question_type_string = 'free_text'
+            question['question_type'] = question_type_string
+
+
+            question_text_crop = question_text[start_index:].strip()
+            print(question_text_crop)
+            if '[' in question_text_crop:
+                end_index = question_text_crop.index('[')
+                text = question_text_crop[:end_index]
+            else:
+                text = question_text_crop
+            question['text'] = text
+            if question_type_string == 'button':
+                answer_string = question_text_crop[end_index:]
+                answer_string = answer_string.replace('[','').replace(']','')
+                answer_options = answer_string.split(',')
+                question['answer_choices'] = json.dumps(answer_options)
+                
+            questions[node['id']] = question
+
+
 
 num_roots = 0
 
@@ -49,7 +88,6 @@ def build_from_root(id):
         current_fragment = [current_source]
         for edge in graph['edges']:
             if edge['sourceId'] == current_source:
-
                 current_fragment += [edge['targetId']]
                 current_fragment += get_target_index(current_source, edge)
                 sources_to_explore += [edge['targetId']]
@@ -116,6 +154,16 @@ def get_target_index(source_id, edge):
             for i in range(len(edge_range)):
                 value = int(edge_range[i])
                 edge_range[i] = value
+            
+            question = questions[source_id]
+         
+           
+            cutoffs = [int(minmax[0])]
+            for a_range in other_ranges:
+                cutoffs += [int(a_range[1])]
+            cutoffs += [int(minmax[-1])]
+            question['answer_choices'] = json.dumps(cutoffs)
+
             for i in range(len(other_ranges)):
                 other_range = other_ranges[i]
                 if other_range == edge_range:
