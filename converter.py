@@ -42,6 +42,7 @@ for condition in condition2roots.keys():
 
 def build_from_root(id):
     tree = []
+    print('Building tree for condition: ' + root2condition[id])
     sources_to_explore = [id]
     while len(sources_to_explore) > 0:
         current_source = sources_to_explore.pop()
@@ -52,10 +53,13 @@ def build_from_root(id):
                 current_fragment += [edge['targetId']]
                 current_fragment += get_target_index(current_source, edge)
                 sources_to_explore += [edge['targetId']]
+                tree += [current_fragment]
+                current_fragment = [current_source]
         if len(current_fragment) == 1:
             current_fragment += ['<none>', '<none>']
-        tree += [current_fragment]
-
+            tree += [current_fragment]
+      
+    return tree
 def get_target_index(source_id, edge):
     print('EDGE : ' + str(edge))
     source_node = id2node[source_id]
@@ -148,8 +152,10 @@ def get_target_index(source_id, edge):
 
 for id in id_is_root.keys():
     if id_is_root[id]:
-        trees[root2condition[root]] = build_from_root(id)
+        print('Beginning tree build for ' +  root2condition[id])
+        trees[root2condition[id]] = build_from_root(id)
         num_conditions = len(id2condition.keys())
+
 print(str(num_conditions) + ' conditions found in graph.')
 print(str(num_roots) + ' roots found in graph.')
 print(str(len(graph['nodes'])) + ' nodes found in graph.')
