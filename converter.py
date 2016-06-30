@@ -1,5 +1,6 @@
 import json
 import numpy
+import redis, os
 
 graph_file = open('graph.json', 'rb')
 graph = json.loads(graph_file.read())
@@ -29,7 +30,7 @@ for i in range(len(graph['nodes'])):
         question_text = node['text']
 
         if '[' in question_text:
-            #print(question_text)
+            ##print(question_text)
             start_index = question_text.index(']') + 1
             question_type = question_text[:start_index]
             question_type = question_type[1:-1].lower()
@@ -44,7 +45,7 @@ for i in range(len(graph['nodes'])):
 
 
             question_text_crop = question_text[start_index:].strip()
-            #print(question_text_crop)
+            ##print(question_text_crop)
             if '[' in question_text_crop:
                 end_index = question_text_crop.index('[')
                 text = question_text_crop[:end_index]
@@ -91,7 +92,7 @@ def build_from_root(id):
 
     sources_to_explore = [id]
     while len(sources_to_explore) > 0:
-        print(sources_to_explore)  
+        #print(sources_to_explore)  
         current_source = sources_to_explore.pop()
         current_fragment = [current_source]
         for edge in graph['edges']:
@@ -102,7 +103,7 @@ def build_from_root(id):
 
                 target_indices = get_target_index(current_source, edge)
                 for target_index in target_indices:
-                    #print('ADDING ' + target_index)
+                    ##print('ADDING ' + target_index)
                     tree += [current_fragment + [target_index]]
                 
 
@@ -131,7 +132,7 @@ def get_target_index(source_id, edge):
         question_type = 'test'
     text = source_node['text']
 
-    #print('CROPPING ' + text)
+    ##print('CROPPING ' + text)
     crop_start = text.index('[')
     crop_end = text.index(']') + 1
     crop_text = text[crop_start:crop_end]
@@ -143,7 +144,7 @@ def get_target_index(source_id, edge):
 
         text = source_node['text']
         for i in range(0,2):
-            #print('CROPPING ' + text)
+            ##print('CROPPING ' + text)
             crop_start = text.index('[')
             crop_end = text.index(']') + 1
             crop_text = text[crop_start:crop_end]
@@ -152,8 +153,8 @@ def get_target_index(source_id, edge):
         
         #cutoff_point = source_node['tex
         #cutoff_text = source_node['text'][:cutoff_point]
-        #print(text)
-        #print(crop_text)
+        ##print(text)
+        ##print(crop_text)
         minmax = crop_text.replace(' ','').replace('[', '').replace(']','')
         minmax = minmax.split(',')
         
@@ -199,9 +200,9 @@ def get_target_index(source_id, edge):
          
            
             cutoffs = [int(minmax[0])]
-            #print(str(source_node))
+            ##print(str(source_node))
             for a_range in other_ranges:
-                print(a_range)
+                #print(a_range)
                 cutoffs += [int(a_range[1])]
             cutoffs += [int(minmax[1])]
             if minmax[0] < cutoffs[0]:
@@ -233,7 +234,7 @@ def get_target_index(source_id, edge):
             text = source_node['text']
             
 
-            #print('CROPPING ' + text)
+            ##print('CROPPING ' + text)
             crop_start = text.index('[')
             crop_end = text.index(']') + 1
             crop_text = text[crop_start:crop_end]
@@ -292,5 +293,49 @@ for condition in trees.keys():
         if edge[1] not in question_bank[condition] and edge[1] != '<null>':
             question_bank[condition] = question_bank[condition] + [edge[1]]
         
+print(str(len(questions)) + ' questions made.') 
 
+redis_host = os.getenv('REDIS_HOST', 'localhost')
+redis_port = os.getenv('REDIS_PORT', 6379)
+redis_password = os.getenv('REDIS_PASSWORD', None)
+
+r = redis.StrictRedis(host=redis_host, port=redis_port, db=0, password=redis_password)
+r.flushdb()
+
+condition2id = {}
+for id in id2condition.keys():
+    condition2id[id2condition[id]] = id 
+
+def make_condition_name(condition):
+    #start = condition.index('/')
+    end = condition[1:].index('/') + 1
+    condition_name = condition[end:]
+    condition_name = condition_name.replace('-', ' ')
+    condition_name = condition_name[0].upper() + condition_name[1:] 
+    return condition_name
+
+for condition in question_bank:
+    questions = question_bank[condition]
+    for question in questions:
+
+        r.set('question:' + question['id'] + ':text', question['text'])
+        r.set('question:' + question['id'] + ':question_type', question['question_type'])
+        r.set('question:' + question['id'] + ':answer_choices', question['answer_choices']) 
+
+
+    r.set('disease:' +  condition2id[condition] + ':name', make_condition_name(condition))
+    questions = question_bank[condition] 
+    r.rpush('disease:' + condition2id[condition] + ':questions', *questions)
+    r.set('disease:' + condition2id[condition] + ':decision_tree', json.dumps(trees[condition]))
+
+'''
+id2condition = {}
+id_is_root = {}
+id2node = {}
+condition2roots = {}
+root2condition = {}
+trees = {}
+questions = {}
+question_bank = {}
+'''
 
