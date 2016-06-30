@@ -16,6 +16,8 @@ trees = {}
 questions = {}
 question_bank = {}
 print_database = False
+print_form = True
+num_helpers = 3
 
 for i in range(len(graph['nodes'])):
     node = graph['nodes'][i]
@@ -354,6 +356,27 @@ if print_database:
                 except:
                     print r.zrange(key, 0, -1)
 
+
+
+div = len(questions.keys())/num_helpers
+
+
+if print_form:
+    for i in range(num_helpers):
+        outfile = open('form' + str(i) + '.txt', 'wb')
+        if i == num_helpers - 1:
+            question_ids = questions.keys()[i*div:]
+        else:
+            question_ids = questions.keys()[i*div:(i+1)*div]
+        for question_id in question_ids:
+            question = questions[question_id]
+            outfile.write(('*'+question_id + '\n').encode('utf8'))
+            outfile.write((question['question_type'] + ' ' + question['text'] + '\n').encode('utf8'))
+            if question['question_type'] == 'button':
+                for answer in json.loads(question['answer_choices']):
+                    outfile.write(('~ ' + answer.strip() + '\n').encode('utf8'))
+        outfile.close()
+        
 
 
 '''

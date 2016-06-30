@@ -1,0 +1,1262 @@
+*idea413
+free_text How long have you had these symptoms for?
+*idea412
+free_text Can you think of a trigger around when you first got sick? For example, has anyone around you been sick or had strep throat?
+*idea411
+button Since you first got sick, have your symptoms gotten worse, better, or stayed about the same? 
+~ Better
+~ Worse
+~ Stayed about the same
+*idea410
+free_text Is there anything you have tried taking, or a time of the day when your symptoms are better?
+*idea417
+button Is there blood in your urine? 
+~ yes
+~ no
+*idea416
+free_text Positive result 
+*idea415
+button Do you feel lower back pain? 
+~ yes
+~ no
+*idea414
+button Do you feel sharp pain that radiates to your groin? 
+~ yes
+~ no
+*idea552
+button Have you had any allergic symptoms, such as sneezing, itching, or running nose? 
+~ Yes
+~ No
+*idea553
+button Have you heard any ringing in your ears? 
+~ Yes
+~ No
+*idea419
+button Do you feel lower back pain? 
+~ yes
+~ no
+*idea551
+button Have you had nasal discharge (mucus)? 
+~ Yes
+~ No
+*idea556
+free_text Distinguish conductive or sensorineural hearing loss 
+*idea557
+button Have you been experiencing any loss of hearing? 
+~ Yes
+~ No
+*idea554
+button Have you any pressure in your ears? 
+~ Yes
+~ No
+*idea555
+button Have you had any pain in your ears? 
+~ Yes
+~ No
+*idea90
+button Do you use earphones that are placed inside the ear canal directly often? 
+~ Yes
+~ No
+*idea91
+button Have you noticed a temporary loss in your hearing? 
+~ Yes
+~ No
+*idea92
+button Do you use cotton swabs or other similar objects to clean your ear canals daily? 
+~ Yes
+~ No
+*idea205
+free_text What have you noticed makes the acne better?
+*idea94
+button Have you noticed the pain in your legs decrease once you have elevated them? 
+~ Yes
+~ No
+*idea95
+slider About how many hours a day do you spend sitting/inactive? 
+*idea96
+button Have you had a history of blood clots? 
+~ Yes. No
+*idea97
+free_text Vascular Ultrasound
+*idea98
+button Have you noticed any change in the color or appearance of your legs? 
+~ Yes
+~ No
+*idea99
+button Do you experience tiredness or aching of your legs after minimal physical activity? 
+~ Yes
+~ No
+*idea367
+button Is it especially hard to breathe at certain times of the day? 
+~ Yes it is worst in the morning
+~ Yes it is worst at night
+~ Yes it is worst when I'm working or exercising
+~ No it's about the same throughout the day
+*idea366
+free_text Lung sounds 
+*idea361
+button Have you ever had any of the following conditions? Check all that apply. 
+~ Heart failure
+~ Nerve disease
+~ Stroke
+~ Tuberculosis
+~ COPD
+*idea360
+button How many packs did/do you smoke per day? 
+~ Less than 1 pack
+~ 1 pack
+~ 2 packs
+~ 3 packs
+~ 4+ packs
+*idea208
+button Do you have access to a home pregnancy test? 
+~ Yes
+~ No
+*idea209
+button Are you experiencing any of the following nasal related symptoms? 
+~ nosebleeds
+~ congestion or nasal stuffiness
+~ runny nose
+*idea1202
+button Have you been having trouble breathing? 
+~ Yes
+~ No
+*idea169
+free_text Can you describe how the size or shape of the breast has changed?
+*idea168
+free_text How long ago did you first notice a change in your breast? Can you think of anything that may have triggered it?
+*idea167
+free_text Is there anything you do or take, or time of the day or month when your symptoms are worse?
+*idea166
+free_text Is there anything you do or take, or time of the day or month when your symptoms are better?
+*idea165
+free_text Can you list all medications you have tried?
+*idea164
+free_text Can you list all other medications, vitamins, hormones (or oral contraceptives), or supplements you regularly take?
+*idea163
+free_text Can you describe whether this lump has changed in size?
+*idea162
+free_text Do you currently smoke tobacco and have you smoked in the past? If so, when did you stop (and quit, if you don't currently smoke). How much would you smoke in a typical day?
+*idea161
+free_text Positive allergy test 
+*idea160
+free_text Positive for bacteria or viruses in eye secretions 
+*idea443
+button Do you have severe eye pain? 
+~ Yes
+~ No
+*idea550
+free_text Can you describe its appearance?
+*idea1125
+button Can you describe what the fluid from your nose looks like? Check all that apply. 
+~ Watery
+~ Solid
+~ Slimy
+~ Clear
+~ Yellow
+~ Green
+*idea1111
+button We are now going to check your belly. First find the bottom-right edge of your left rib cage. Now, press down. This picture might help you figure out where.  Take a deep breath in and out. And again, in and out. Feel anything? 
+~ Yes
+~ No
+~ Not sure
+*idea760
+free_text Can you list any medications, vitamins, or supplements you take?
+*idea1208
+button Was the birth mother positive for Cytomegalovirus (CMV) during pregnancy? 
+~ Yes she was positive
+~ No she was negative
+~ This was never checked
+~ Not sure
+*idea1127
+free_text Positive Rapid Influenza Diagnostic Test 
+*idea1209
+button Was the birth mother positive for Herpes Simplex Virus (HSV) during pregnancy? 
+~ Yes and she was treated with antibiotics
+~ Yes but she was not treated with antibiotics
+~ No she tested negative for HSV
+~ This was never tested in a pre-natal visit
+~ Not sure
+*idea1126
+button Have you had a runny nose? 
+~ Yes
+~ No
+*idea529
+free_text Neuroimaging 
+*idea527
+button Do you have any food allergies? 
+~ Yes
+~ No
+*idea526
+button Do you have a history of Inflammatory Bowel Disease? 
+~ Yes
+~ No
+*idea525
+button Do you have a history of celiac disease (intolerance to gluten)? 
+~ Yes
+~ No
+*idea524
+button Have you been vomiting? 
+~ Yes
+~ No
+*idea523
+free_text Can you describe the appearance of your vomit?
+*idea522
+button Is it bloody? 
+~ Yes
+~ No
+*idea521
+button Have you had any diarrhea? 
+~ Yes
+~ No
+*idea520
+free_text Can you describe the appearance of your bowel movements?
+*idea488
+free_text Please list any previous eye problems including injuries and eye diseases.
+*idea206
+button What was the result of your home pregnancy test? 
+~ Positive
+~ Negative
+*idea842
+button Have you ever smoked tobacco? 
+~ Yes
+~ No
+*idea843
+free_text Abnormal findings 
+*idea844
+free_text Positive test 
+*idea845
+free_text Have you ever had any sexually transmitted infections, and if so, did you receive treatment for these?
+*idea846
+free_text Have you travelled anywhere (either in or out of the country) in the past year, and if so, where?
+*idea207
+button Have you taken a home pregnancy test? 
+~ Yes
+~ No
+*idea480
+button Have you ever been diagnosed with a urinary tract infection? 
+~ Yes
+~ No
+*idea481
+free_text Urine Analysis
+*idea482
+button Have you felt nauseous or been vomiting? 
+~ Yes
+~ No
+*idea483
+button Do you feel any pelvic discomfort or pressure in your lower abdomen? 
+~ Yes
+~ No
+*idea484
+button Is your urine cloudy and/or foul-smelling? 
+~ Yes
+~ No
+*idea204
+free_text Elevated HCG level 
+*idea486
+button Have you noticed any of the following changes while urinating? 
+~ A strong and persistent urge
+~ Burning sensations
+~ Passing frequent small amounts of urine
+~ No
+*idea1144
+slider Sorry to hear you are not feeling well! How long (in days) have you felt sick for? 
+*idea202
+free_text Elevated HCG level 
+*idea203
+free_text What have you noticed makes the acne worse?
+*idea941
+free_text Sigmoidoscopy
+*idea940
+button Do you have a history of arthritis? 
+~ Yes
+~ No
+*idea943
+free_text CBC
+*idea942
+free_text Fecal Lactoferrin
+*idea945
+button Can you lie down on your belly and lift each leg up one at a time like the picture shows. Does this cause pain? 
+~ Yes
+~ No
+*idea200
+slider How many years ago did you quit smoking? 
+*idea947
+free_text What surgeries?
+*idea946
+button Have you lost weight unintentionally recently? 
+~ Yes
+~ No
+*idea949
+button Okay, now, pinch your nose closed,  keep your mouth closed, and try to blow out air (but make sure your nose and mouth are shut, and you don't actually blow out air!). Now, when you do this, does the lump get bigger? 
+~ Yes
+~ No
+~ Not sure
+*idea948
+button Have you had any surgeries before? 
+~ Yes
+~ No
+*idea201
+free_text Presence of embryo/fetus 
+*idea660
+button Is there blood in your urine? 
+~ Yes
+~ No
+*idea732
+button Have you tried taking any medications since getting sick? 
+~ Yes
+~ No
+*idea365
+free_text Heart sounds 
+*idea730
+free_text Please list any surgeries or other procedures you have had.
+*idea731
+free_text What makes your symptoms feel better?
+*idea736
+free_text How long have you been ill for?
+*idea737
+free_text Please list any medications, vitamins, or other supplements you take.
+*idea734
+button Is there anything you do or a time of the day when your symptoms are better? 
+~ Yes
+~ No
+*idea364
+button Can you describe what the sputum (or spit) looks like? Check all that apply. 
+~ Clear and thin
+~ Milky white
+~ Milky yellow
+~ Green
+~ Bubbly
+~ Currant jelly-like
+~ Rust-color
+~ Dark brown
+~ Blood (or red) flecks
+~ Pink and frothy
+*idea738
+button Do you smoke tobacco or have you smoked tobacco in the past? 
+~ Yes but I quit
+~ Yes I still smoke
+~ No
+*idea739
+button Ok, now, try to find this point on yourself  (show picture of xiphoid process), and press down just below it. Is it painful to do this? 
+~ Yes
+~ No
+*idea1159
+slider Sorry to hear that! On a scale of 1-10, with 1 meaning you barely feel it and 10 meaning it is the most painful headache of your life, how would you rate your headache? 
+*idea639
+free_text What gall bladder procedure did you have?
+*idea638
+free_text Abdominal Ultrasound
+*idea958
+free_text What color was it?
+*idea633
+free_text Where is the pain?
+*idea632
+free_text Enlarged Appendix 
+*idea630
+button Have you experienced any vomiting? 
+~ Yes
+~ No
+*idea637
+free_text CBC
+*idea636
+free_text Chem 7
+*idea635
+free_text ABG
+*idea634
+free_text Chem 7
+*idea387
+free_text Can you list of any other medical conditions you might have?
+*idea386
+slider Approximately how many hours do you spend outside daily, specifically exposed to the sun? 
+*idea385
+slider Approximately how many hours do you spend outside daily, specifically exposed to the sun? 
+*idea384
+button What is your gender? 
+~ male
+~ female
+~ male-to-female
+~ female-to-male
+~ other
+*idea383
+free_text What makes your symptoms better?
+*idea363
+free_text What antibiotics were you unable to complete?
+*idea381
+free_text What medical conditions do you have?
+*idea380
+button How long ago did you quit smoking? 
+~ Less than one month ago
+~ 1 year ago
+~ 2-5 years ago
+~ 5-10 years ago
+~ 10+ years ago
+*idea362
+free_text What do you take?
+*idea389
+slider How many bowel movements do you have in a day? 
+*idea388
+button Are there any lumps that your can feel where the cuts for this surgery were made? 
+~ Yes
+~ No
+*idea876
+slider How old are you? 
+*idea718
+slider Good work! Now let's try to measure your pulse. You should be able to find this on your upper wrist. This picture might help you locate it. Got it? Great! Now, try to count how many times you feel your pulse in 30 seconds. Ready, set, go! 
+*idea719
+slider We are now going to check your breathing. Are you near a clock? Try to count how many times you breathe in 30 seconds. Keep breathing as you would normally! 
+*idea950
+button Does this lump get bigger when you stand up? 
+~ Yes
+~ No
+*idea1112
+button Do you have or have you ever had a sexually transmitted infection? 
+~ Yes
+~ No
+~ Not sure
+*idea951
+free_text Can you describe what your bowel movements look like?
+*idea1020
+button Have you been having trouble with your vision or eye movements? 
+~ Yes
+~ No
+*idea747
+button Have you taken the flu vaccine this year? 
+~ Yes
+~ No
+~ Not Sure
+*idea746
+free_text Please list all of the vaccinations you are up to date on.
+*idea745
+free_text Please list out any medications you may have taken since you got sick.
+*idea743
+free_text Hi, sorry to hear you're not feeling well, but we'll do our best to figure out what is going on as soon as possible. In a few words, can you tell us what's been going on?
+*idea742
+button Ok, to clarify, can you check off any of the following symptoms that you might have? 
+~ Nausea
+~ Vomiting
+~ Loss of appetite
+~ Fever
+~ Chills
+~ Difficulty breathing
+~ none
+*idea741
+button Have there been any changes in your urine, regarding frequency, color, and/or ease of urinating? 
+~ Yes
+~ No
+*idea489
+button Does it feel like there is something in your eye? 
+~ Yes
+~ No
+*idea1107
+free_text Percuss abdomen 
+*idea1106
+free_text Percuss abdomen 
+*idea1105
+button Have you taken any antibiotics or antivirals since you got sick? 
+~ Yes
+~ No
+*idea1104
+free_text Do you take any other medicines? Which ones?
+*idea1103
+free_text How about other herbal medicines or vitamins and supplements?
+*idea1102
+free_text Which countries and US states have you travelled to during the past 18 months?
+*idea749
+button Have you heavily strained your muscles in any way recently (such as heavy lifting, giving birth, etc)? 
+~ Yes
+~ No
+*idea748
+free_text Can you describe the muscle-straining action?
+*idea710
+button Do you experience these symptoms year-round, or just during certain months? 
+~ year-round
+~ certain months
+*idea378
+free_text What changes have you noticed?
+*idea711
+button Is your diet high in fiber? 
+~ Yes
+~ No
+*idea259
+button Do you have a visible lesion at the affected joint? 
+~ Yes
+~ No
+*idea1169
+button Were you prescribed a course of antibiotics that you have not been able to complete? 
+~ Yes
+~ No
+*idea258
+button Are you a user of intravenous drugs, and/or are you unable to go to the doctor when needed? 
+~ Yes
+~ No
+*idea1088
+free_text Absence of pneumonia-causing bacteria in the lungs 
+*idea1168
+button Do you take any other medicines? 
+~ Yes
+~ No
+*idea1086
+button Have you experienced any shortness of breath and/or difficulty in breathing? 
+~ Yes
+~ No
+*idea1087
+button How long have you been experiencing this cough? 
+~ Less than 1 Week
+~ Less than 1 Month
+~ 6 Months
+~ 1 Year
+*idea1084
+free_text Absence of bacteria in sputum 
+*idea1085
+button Does it get increasingly worse with physical activity such as walking, running, or climbing stairs? 
+~ Yes
+~ No
+*idea1082
+free_text Have you had any serious and diagnosed respiratory illnesses in the past, such as pneumonia, pertussis, etc.?
+*idea1083
+button Do you have a history of bronchitis? 
+~ Yes
+~ No
+*idea1080
+free_text 
+*idea1081
+button Have you had any signs of a fever in the past week? 
+~ Yes
+~ No
+*idea123
+slider How many times a day do you brush your teeth? 
+*idea122
+slider How many times a week do you use mouthwash? 
+*idea248
+button Have you been experiencing chills, or feeling feverish or unusually hot? 
+~ Yes
+~ No
+*idea249
+button Has your stool been black recently? Or at least darker than usual? 
+~ Yes
+~ No
+*idea127
+button Do you have diabetes? 
+~ Yes
+~ No
+*idea126
+button Do you smoke tobacco or have you smoked tobacco in the past? 
+~ Yes but I quit
+~ Yes I still smoke
+~ No I have never smoked
+*idea125
+button How many packs do/did you smoke per day? 
+~ Less than 1 pack
+~ 1 pack
+~ 1-2 packs
+~ 2+ packs
+*idea124
+button Are you experiencing any of the following? 
+~ recurrent bad breath
+~ red gums
+~ swollen gums
+~ tender gums
+~ bleeding of your gums after brushing
+~ receding gums
+~ teeth pain when chewing
+~ loose teeth
+~ sensitive teeth
+~ longer appearing teeth
+*idea242
+button Do/did you live with someone who frequently smoked indoors? 
+~ Yes
+~ No
+*idea243
+button How long ago did you quit smoking? 
+~ Less than one month ago
+~ 1 year ago
+~ 2-5 years ago
+~ 5-10 years ago
+~ 10+ years ago
+*idea240
+free_text What are you taking?
+*idea241
+free_text How long did you live with them?
+*idea246
+button Has your pain moved? 
+~ Yes
+~ No
+*idea247
+free_text Where is your pain located?
+*idea244
+button Have you been experiencing chills and/or feeling unusually hot/feverish? 
+~ Yes
+~ No
+*idea245
+button Please apply gentle pressure to the painful area, then quickly release the pressure. Does the pain get worse when you do this? 
+~ Yes
+~ No
+*idea870
+free_text Positive findings 
+*idea1212
+free_text Bacterial growth 
+*idea1033
+button Do you have tooth discomfort? 
+~ Yes
+~ No
+*idea60
+button Do you urinate frequently? 
+~ Yes
+~ No
+*idea63
+free_text Are you currently suffering from any medical condition?
+*idea62
+free_text Schirmer's Tear Test
+*idea65
+button Have you noticed yourself experiencing cloudy vision or spotty vision? 
+~ Yes
+~ No
+*idea64
+free_text Eye Exam
+*idea67
+button Have you noticed redness within the whites of your eyes? 
+~ Yes
+~ No
+*idea66
+button Have you noticed yourself seeing double? 
+~ Yes
+~ No
+*idea69
+free_text Can you describe the color and texture of this discharge?
+*idea68
+button Have you experienced itchiness sensations in either eye? 
+~ Yes
+~ No
+*idea1039
+free_text Anterior rhinoscopy 
+*idea252
+button Have you been experiencing chills or feeling unusually hot/feverish? 
+~ Yes
+~ No
+*idea873
+free_text Diameter 
+*idea563
+button Do you feel tenderness when you move your ear or jaw? 
+~ Yes
+~ No
+*idea562
+button Is your throat swollen or sore? 
+~ Yes
+~ No
+*idea561
+button Are you having trouble hearing? 
+~ Yes
+~ No
+*idea560
+slider How many days have you been experiencing these symptoms? 
+*idea567
+button How have the symptoms progressed? 
+~ Improved
+~ Worsened
+~ Stayed the same
+*idea566
+free_text For how long?
+*idea564
+button Are you experiencing any of the following around your ear or ear canal? 
+~ Pain
+~ Itching or irritation
+~ Redness and swelling
+~ Pressure
+~ Peeling of skin
+~ Discharge (water or pus-like)
+~ No
+*idea683
+free_text Ultrasound of the kidney
+*idea569
+button Are you having trouble with concentration or memory? 
+~ Yes
+~ No
+*idea568
+slider How many days have you been experiencing these symptoms? 
+*idea686
+button Have you noticed any swelling in your lower body, for example in your lower extremities? 
+~ Yes
+~ No
+*idea687
+free_text Can you describe the color change?
+*idea684
+free_text Urea and Creatinine BUN and Creatinine/BMP
+*idea685
+free_text Urine Output Measurement
+*idea336
+free_text What makes your symptoms worse?
+*idea337
+free_text What might have triggered this?
+*idea334
+button Has the baby been vomiting lately? 
+~ Yes
+~ No
+*idea335
+button Has the baby been more irritable lately? 
+~ Yes
+~ No
+~ Not sure
+*idea332
+button Have you been diagnosed with diabetes? 
+~ Yes
+~ No
+*idea333
+free_text Please describe the vomit.
+*idea330
+button Are you experiencing numbness in your fingers and/or arms? 
+~ Yes
+~ No
+*idea331
+free_text What type of infection(s) and what type of treatment did you have?
+*idea444
+button Have you had any nausea or vomiting? 
+~ Yes
+~ No
+*idea445
+button Do you have a headache? 
+~ Yes
+~ No
+*idea446
+button Do you notice blurriness in some of your visual field? 
+~ Yes
+~ No
+*idea447
+button Do you see halos around lights? 
+~ Yes
+~ No
+*idea440
+button Do you have any cloudiness in the middle of your eye? 
+~ Yes
+~ No
+*idea441
+button Do you have any redness surrounding your eye? 
+~ Yes
+~ No
+*idea442
+button Have you noticed a change in the appearance of your eye? 
+~ Yes
+~ No
+*idea339
+free_text What makes your symptoms better?
+*idea239
+button How many packs do/did you smoke per day? 
+~ Less than 1 pack
+~ 1 pack
+~ 1-2 packs
+~ 2+ packs
+*idea238
+button How long ago did you quit smoking? 
+~ Less than one month ago
+~ 1 year ago
+~ 2-5 years ago
+~ 5-10 years ago
+~ 10+ years ago
+*idea237
+button Do/did you live with someone who frequently smoked indoors? 
+~ Yes
+~ No
+*idea236
+free_text How long did you live with them?
+*idea235
+free_text What causes your symptoms to feel worse?
+*idea234
+free_text What  medication(s) have you tried?
+*idea233
+button Have you experienced any changes in your bowel movements, regarding frequency, consistency, appearance, etc? 
+~ Yes
+~ No
+*idea232
+free_text What do you eat in an average day?
+*idea231
+button Do you drink alcohol? 
+~ Yes
+~ No
+*idea230
+free_text Please list any medical conditions you have or have had.
+*idea620
+slider On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? 
+*idea1025
+slider On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? 
+*idea1187
+free_text CSF culture
+*idea621
+button Is the pain worsened by walking, coughing, or other movement? 
+~ Yes
+~ No
+*idea997
+slider When you do consume alcohol, how many drinks do you consume during an average day of drinking? 
+*idea1124
+button Is the headache located in a particular part of your head, or is it throughout your entire head? 
+~ Part of head
+~ Entire head
+*idea1132
+free_text Can you tell me more about your sore throat? Are you having trouble swallowing food or water or speaking?
+*idea198
+free_text Has your stool been different in any other ways?
+*idea1078
+button Do you have a history of asthma? 
+~ Yes
+~ No
+*idea1021
+button Have you used over the counter decongestant medication? 
+~ Yes
+~ No
+*idea1022
+button Have you had nasal discharge (mucus)? 
+~ Yes
+~ No
+*idea1142
+button Since you first felt sick, have your symptoms gotten better, worse, or stayed about the same? 
+~ They are getting better
+~ They are getting worse
+~ They have been about the same
+*idea839
+free_text Abnormal lung sounds 
+*idea838
+free_text Abnormal heart sounds 
+*idea1023
+button Sorry to hear you are not feeling well! How long have these symptoms been going on for? 
+~ Less than 2 weeks
+~ 2-4 weeks
+~ More than 4 weeks
+*idea1118
+free_text Positive test 
+*idea1134
+slider On a scale from 1 - 10 with 1 meaning no pain and 10 meaning the worst pain you can imagine, how bad is the headache? 
+*idea831
+free_text Abnormal findings 
+*idea830
+free_text Abnormal findings 
+*idea833
+free_text Positive growth 
+*idea832
+free_text Chest X Ray for bacterial pneumonia
+*idea835
+slider We are now going to check your breathing. Are you near a clock? Try to count how many times you breathe in 30 seconds. Keep breathing as you would normally! 
+*idea834
+free_text Abnormal findings 
+*idea837
+free_text Abnormal findings 
+*idea836
+slider Now let's try to measure your pulse. You should be able to find this on your upper wrist. This picture might help you locate it. Got it? Great! Now, try to count how many times you feel your pulse in 30 seconds. Ready, set, go! 
+*idea1026
+free_text Palpate lymph nodes
+*idea1027
+button Have you noticed any weight loss recently? 
+~ Yes
+~ No
+*idea1213
+free_text Fever 
+*idea664
+free_text Urine culture
+*idea665
+free_text Urinanalysis to rule out infection
+*idea666
+button Are you experiencing any back, side, or groin pain? 
+~ Yes
+~ No
+*idea667
+button Are you experiencing chills? 
+~ Yes
+~ No
+~ Not sure
+*idea370
+free_text What part of your head is it located at?
+*idea661
+slider How long ago (in days) did the pain begin? 
+*idea662
+button Are you experiencing frequent, painful urination? 
+~ Yes
+~ No
+*idea663
+free_text CT Scan or Ultrasound of the urinary tract
+*idea703
+button Are you constipated? 
+~ Yes
+~ No
+*idea702
+button Are you bloated? 
+~ Yes
+~ No
+*idea701
+button Are you pregnant? 
+~ Yes
+~ No
+*idea700
+free_text Elevated white blood cell count 
+*idea668
+button Are you experiencing nausea or vomiting? 
+~ Yes
+~ No
+*idea669
+button Do you have a thermometer available to measure your temperature? 
+~ Yes
+~ No
+*idea705
+button Are you experiencing diarrhea? 
+~ Yes
+~ No
+*idea704
+button Do you have a decreased appetite? 
+~ Yes
+~ No
+*idea905
+button Have you noticed any swelling of your skin around this area? 
+~ Yes
+~ No
+~ Not sure
+*idea904
+button Have you noticed that your skin has been drier than usual? 
+~ Yes it is drier
+~ No it is about the same
+*idea907
+slider On a scale of 0 to 10 with 0 meaning no pain, and 10 meaning the worst pain imaginable, how much pain are you in right now? 
+*idea906
+free_text Do you have any moles near the acne, and if so, how many do you have?
+*idea901
+button Have there been any changes in the shampoo or soap you regularly use? 
+~ Yes change in shampoo
+~ Yes change in soap
+~ Yes change in shampoo and soap
+~ No
+*idea900
+free_text Do you have any other medical conditions? If so, which ones?
+*idea903
+button Can you check off all of the following (if any) that apply? 
+~ My skin has been peeling more than usual
+~ My skin has been scaly lately
+~ My skin has been rougher lately
+~ None of these apply
+*idea902
+button Have you been losing more hair than usual? 
+~ Yes
+~ No
+~ Not sure
+*idea909
+button Can you tell us how big each spot is? 
+~ Pinhead size
+~ Pimple size (or tip of a pen)
+~ Small seed (or 1/2 centimeter)
+*idea908
+free_text Can you describe if any fluid is coming out of these spots, and, if so, what that fluid looks like. For example, is it sticky, watery, oily? What color is it? Is there blood?
+*idea18
+button Are you experiencing any of the following symptoms? 
+~ Severe pain in your upper right abdomen
+~ Pain that radiates to your right shoulder or back
+~ Tenderness when you touch your abdomen
+~ None
+*idea371
+slider On a scale of 1 - 10 with 1 meaning that you cough rarely and 10 meaning that you cough all day, how bad is the cough? 
+*idea10
+button Are you experiencing any of the following symptoms? 
+~ Loss of appetite
+~ Fatigue
+~ Weakness
+~ Problems sleeping
+~ Hiccups
+~ Itching
+~ Muscle twitches and cramps
+~ Swollen feet and ankles
+~ None
+*idea11
+button Have you felt nauseous or been vomiting? 
+~ Yes
+~ No
+*idea13
+button Do your symptoms worsen when you inspire? 
+~ Yes
+~ No
+*idea14
+button Have you felt nauseous or been vomiting? 
+~ Yes
+~ No
+*idea15
+free_text Fever 
+*idea16
+button Have you been experiencing chills, or feeling feverish or unusually hot? 
+~ Yes
+~ No
+*idea17
+button Do you have a thermometer available to measure your temperature? 
+~ Yes
+~ No
+*idea699
+free_text Enlarged appendix 
+*idea698
+free_text Enlarged Appendix 
+*idea1079
+free_text Lung sounds 
+*idea841
+free_text When did you start smoking and, if you don't currently smoke, when did you quit? Approximately, how many packs would you smoke in a typical day? Please also mention if you live with someone who smokes.
+*idea1216
+button Was the baby born more than 18 hours after membrane rupture?
+~ yes
+~ no
+~ not sure
+*idea1076
+button Do you work in an environment that is constantly exposed to air pollutants (such as a factory)? 
+~ Yes
+~ No
+*idea1075
+slider Approximately how many hours per day do you spend outdoors? 
+*idea1074
+free_text What symptoms are you currently experiencing?
+*idea1073
+button Do you have any known allergies? 
+~ Yes
+~ No
+*idea1072
+free_text What allergies do you have?
+*idea1071
+button Do you live in an area with a high pollen count? 
+~ Yes
+~ No
+*idea1070
+button Have you experienced any shortness of breath or any breathing issues along with your other symptoms 
+~ Yes
+~ No
+*idea1176
+button Do you have a history of cystic fibrosis? 
+~ Yes
+~ No
+*idea1151
+free_text Blood pressure 
+*idea728
+free_text Abnormal findings 
+*idea1153
+button Do you get treatment at a dialysis center regularly? 
+~ Yes
+~ No
+*idea1172
+button Are you on mechanical ventillation? 
+~ Yes
+~ No
+*idea1173
+button Ok, we are going to ask you a couple questions about you sexual history. We ask these because certain sexually transmitted infections increase the risk of you catching other infections (that may be making you sick), and we want to see whether you might be at risk. But, first of all, have you ever had sex? Oral, vaginal, and anal sex all count. 
+~ Yes
+~ No
+*idea1170
+free_text Which antibiotics have you taken?
+*idea1171
+button Have you taken antibiotics any other time in the past 6 months? 
+~ Yes
+~ No
+*idea1178
+slider Approximately how many packs would you smoke in one day? 
+*idea1155
+button Have you had chills or shivers? 
+~ Yes
+~ No
+~ Not sure
+*idea400
+free_text Do you have a history of any surgeries?
+*idea401
+free_text Do you have a history of any medical conditions?
+*idea402
+free_text Positive culture 
+*idea403
+free_text Swollen tonsils with white exudate 
+*idea404
+free_text Elevated temperature 
+*idea405
+slider How old are you? 
+*idea406
+button Can you check off any of the following symptoms you have? 
+~ Red eyes
+~ Hoarse voice
+~ Ulcers in your mouth
+*idea407
+button Do you notice small red spots on the inside of your mouth? 
+~ Yes
+~ No
+~ Not sure
+*idea408
+free_text Can you describe what the rash looks like?
+*idea409
+free_text Is there anything you do or a time of the day when your symptoms are worse?
+*idea1219
+slider How many weeks is the baby?
+*idea1121
+slider On a scale from 1 - 10 with 1 meaning no pain and 10 meaning the worst pain you can imagine, how bad is the pain? 
+*idea273
+slider On average, how many days per week do you drink? 
+*idea272
+slider How many drinks do you have on an average day when you drink? 
+*idea271
+button How many packs do/did you smoke per day? 
+~ Less than 1 pack
+~ 1 pack
+~ 1-2 packs
+~ 2+ packs
+*idea270
+button That's great! When did you quit? 
+~ This month
+~ this year
+~ 1-5 years ago
+~ 5-10 years ago
+~ >10 years ago
+*idea277
+free_text Please describe the location and appearance of the bruise(s).
+*idea276
+button 
+~ 
+*idea275
+free_text What changes have you noticed?
+*idea274
+free_text What changes have you noticed?
+*idea87
+button Are you experiencing symptoms in one ear or both? 
+~ Left Ear
+~ Right Ear
+~ Both Ears
+*idea86
+free_text Heavy wax buildup 
+*idea279
+button Do you feel pressure on your bladder that causes you to urinate more frequently? 
+~ Yes
+~ No
+*idea84
+free_text Can you describe the color and texture of the discharge?
+*idea83
+button Have you noticed any unusual odor (possibly coming from your ears)? 
+~ Yes
+~ No
+*idea82
+free_text Can you describe the odor?
+*idea81
+button Have you experienced any dizziness or headaches recently? 
+~ Yes
+~ No
+*idea80
+slider Approximately how many hours do your headaches last? 
+*idea174
+free_text Approximately how big is the lump?
+*idea175
+button Can you tell us which breast you noticed the change in? 
+~ Left
+~ Right
+~ Both
+*idea176
+button Ok, just to clarify, can you check off any of the following you may have experienced? 
+~ Lump in breast
+~ Pain or soreness in breast
+~ Discharge from the nipple
+~ Change in the size or shape of the breast
+*idea177
+free_text Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe what brings you in?
+*idea170
+free_text Can you describe what the discharge looks and smells like?
+*idea171
+slider On a scale of 0 - 10 with 0 meaning no pain and 10 meaning the worst pain you can imagine, how much pain do you feel? 
+*idea172
+button Which of the following describe how the breast feels? 
+~ Edges are smooth
+~ Edges are spiky
+~ The lump can be compressed
+~ The lump cannot be compressed
+~ None of the above
+~ Not sure
+*idea173
+button Can you move the lump around or does the lump seem to be stuck in one spot? 
+~ I can move it around
+~ It is stuck in one spot
+~ Not sure
+*idea848
+free_text Do you have any allergies, and if so, which ones?
+*idea849
+free_text Do you take any medications, vitamins, or supplements, and if so, which ones?
+*idea375
+free_text What do you take?
+*idea1163
+button Have you ever had unprotected sex (without a condom)? 
+~ Yes
+~ No
+*idea1162
+button Do you know if your partner had a sexually transmitted infection? 
+~ Yes he did
+~ No he did not
+~ Not sure
+*idea485
+button Is there blood in your urine? 
+~ Yes
+~ No
+*idea538
+free_text Where does the pain go?
+*idea539
+button Does the pain radiate elsewhere? 
+~ Yes
+~ No
+*idea534
+button Have you experienced any numbness? 
+~ Yes
+~ No
+*idea535
+button Have you experienced a tingling "pins and needles" sensation? 
+~ Yes
+~ No
+*idea536
+free_text Where have you lost sensation?
+*idea537
+button Do you have any loss of sensation? 
+~ Yes
+~ No
+*idea530
+button Have you had any trouble emptying your bladder, loss of sensation in the area of your buttocks/inner thigh, or pain/numbness/loss of sensation on both sides of your body? 
+~ Yes
+~ No
+*idea531
+free_text Straight leg raise: lay flat on your back, have someone raise your relaxed and straightened leg through about 30-60 degrees; stop if you experience pain.
+*idea532
+free_text Sensory exam
+*idea533
+free_text Reflexes 
+*idea1210
+button Did the baby have an eye infection previously? 
+~ Yes
+~ No
+~ not sure
+*idea840
+free_text Do you work, and if so, what do you do?
+*idea878
+button Is there any smell coming from this (these) area(s)? 
+~ Yes it smells awful
+~ No there's no particular smell
+~ Not sure
+*idea308
+free_text Eye exam
+*idea307
+button Is there a bright red patch of blood on the white portion of your eye? 
+~ yes
+~ no
+*idea306
+button Are you experiencing any change in your vision? 
+~ yes
+~ no
+*idea305
+button Are you experiencing any eye pain? 
+~ yes
+~ no
+*idea304
+button Is there any discharge or excessive fluid coming out of your eye? 
+~ yes
+~ no
+*idea871
+button Have you noticed any ulcers in this area? 
+~ Yes
+~ No
+*idea302
+button Are you experiencing any eye discomfort? 
+~ yes
+~ no
+~ not sure
+*idea301
+button Have you felt nauseous or been vomiting? 
+~ Yes
+~ No
+*idea300
+button Do you have a thermometer available to measure your temperature? 
+~ yes
+~ no
+*idea897
+free_text Which ones? Please write whether or not you have been treated for these.
