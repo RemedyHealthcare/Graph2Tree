@@ -12,7 +12,7 @@ condition2roots = {}
 root2condition = {}
 trees = {}
 questions = {}
-
+question_bank = {}
 
 for i in range(len(graph['nodes'])):
     node = graph['nodes'][i]
@@ -101,7 +101,7 @@ def build_from_root(id):
 
                 current_fragment = [current_source]
         if len(current_fragment) == 1:
-            current_fragment += ['<none>', '<none>']
+            current_fragment += ['<null>', '<null>']
             tree += [current_fragment]
       
     return tree
@@ -259,3 +259,14 @@ print(str(num_conditions) + ' conditions found in graph.')
 print(str(num_roots) + ' roots found in graph.')
 print(str(len(graph['nodes'])) + ' nodes found in graph.')
 print(str(len(trees.keys())) + ' decision trees made.')
+
+for condition in trees.keys():
+    question_bank[condition] = [] 
+    for edge in trees[condition]:
+        if edge[0] not in question_bank[condition] and edge[0] != '<null>':
+            question_bank[condition] = question_bank[condition] + [edge[0]]
+        if edge[1] not in question_bank[condition] and edge[1] != '<null>':
+            question_bank[condition] = question_bank[condition] + [edge[1]]
+        
+
+
