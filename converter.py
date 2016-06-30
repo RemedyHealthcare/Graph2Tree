@@ -89,9 +89,15 @@ def build_from_root(id):
         for edge in graph['edges']:
             if edge['sourceId'] == current_source:
                 current_fragment += [edge['targetId']]
-                current_fragment += get_target_index(current_source, edge)
+                
                 sources_to_explore += [edge['targetId']]
-                tree += [current_fragment]
+
+                target_indices = get_target_index(current_source, edge)
+                for target_index in target_indices:
+                    print('ADDING ' + target_index)
+                    tree += [current_fragment + [target_index]]
+                
+
                 current_fragment = [current_source]
         if len(current_fragment) == 1:
             current_fragment += ['<none>', '<none>']
@@ -115,18 +121,32 @@ def get_target_index(source_id, edge):
         question_type = 'text'
     if '[test]' in source_node['text'].lower():
         question_type = 'test'
-    for i in range(0, 2):   
-        text = source_node['text']  
-        crop_start = text.index('[')
-        crop_end = text.index(']') + 1
-        crop_text = text[crop_start:crop_end]
-        text = text.replace(crop_text, '')
+    text = source_node['text']
+
+    print('CROPPING ' + text)
+    crop_start = text.index('[')
+    crop_end = text.index(']') + 1
+    crop_text = text[crop_start:crop_end]
+    text = text.replace(crop_text, '')
     
 
-    answer_label = '0'
-    if question_type == 'slider':    
-         
-        minmax = text.replace(' ','').replace('[', '').replace(']','')
+    answer_label = ['0']
+    if question_type == 'slider':
+
+        text = source_node['text']
+        for i in range(0,2):
+            print('CROPPING ' + text)
+            crop_start = text.index('[')
+            crop_end = text.index(']') + 1
+            crop_text = text[crop_start:crop_end]
+            text = text.replace(crop_text, '')
+        
+        
+        #cutoff_point = source_node['tex
+        #cutoff_text = source_node['text'][:cutoff_point]
+        print(text)
+        print(crop_text)
+        minmax = crop_text.replace(' ','').replace('[', '').replace(']','')
         minmax = minmax.split(',')
         if edge['label'] != '':
             all_edges = graph['edges']
@@ -147,6 +167,14 @@ def get_target_index(source_id, edge):
                 other_ranges[i] = other_range
             other_ranges = sorted(other_ranges, key = lambda other_range:other_range[0])
             
+            cutoff_points = []
+            for a_range in other_ranges:
+                for val in a_range:
+                    if val not in cutoff_points:
+                        cutoff_points += [val]
+
+
+
             edge_range = edge['label']
             start_index = edge_range.index('(') + 1
             end_index = edge_range.index(')') 
@@ -159,17 +187,22 @@ def get_target_index(source_id, edge):
          
            
             cutoffs = [int(minmax[0])]
+            print(str(source_node))
             for a_range in other_ranges:
+                print(a_range)
                 cutoffs += [int(a_range[1])]
             cutoffs += [int(minmax[-1])]
             question['answer_choices'] = json.dumps(cutoffs)
+        
+            for i in range(len(cutoff_points) - 1):
+                comp_range = cutoff_points[i:i+1]
+                if (edge_range[0] < cutoff_points[1]) or (edge_range[1] > cutoff_points[0]):
+                    if str(i) not in answer_label:
+                        answer_label += [str(i)]
 
-            for i in range(len(other_ranges)):
-                other_range = other_ranges[i]
-                if other_range == edge_range:
-                    answer_label = str(i)
+
         else:
-            answer_label = '0'
+            answer_label = ['0']
 
 
         
@@ -180,6 +213,14 @@ def get_target_index(source_id, edge):
 
     if question_type == ('mc' or 'ms'): #eventually change this to properly accoutn for ms
         if '[' in text:
+            text = source_node['text']
+
+            print('CROPPING ' + text)
+            crop_start = text.index('[')
+            crop_end = text.index(']') + 1
+            crop_text = text[crop_start:crop_end]
+            text = text.replace(crop_text, '')
+
                     
             start_index = text.index('[')
             text = text[start_index:]
@@ -191,15 +232,15 @@ def get_target_index(source_id, edge):
                     for i in range(len(answers)):
                         if edge['label'].lower().strip().replace('[','').replace(']','') == answers[i].lower().strip():
 
-                            answer_label = str(i)
+                            answer_label = [str(i)]
  
 
   
                 else:
-                    answer_label = '0'
+                    answer_label = ['0']
 
             else: #is ms.... we aren't handling these yet
-                answer_label = '0'
+                answer_label = ['0']
 
         else:
              print('NO ANSWERS FOR: ' + str(source_node)) 
