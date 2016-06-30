@@ -56,7 +56,13 @@ for i in range(len(graph['nodes'])):
                 answer_string = answer_string.replace('[','').replace(']','')
                 answer_options = answer_string.split(',')
                 question['answer_choices'] = json.dumps(answer_options)
-                
+            if question_type_string == 'slider':
+                minmaxcut_string = question_text_crop[end_index:]
+                minmaxcut_string = minmaxcut_string.replace('[','').replace(']','')
+                minmaxcut = minmaxcut_string.split(',')
+                slider_vals = [int(minmaxcut[0]), int(minmaxcut[1]), 0]
+                question['answer_choices'] = json.dumps(slider_vals)
+
             questions[node['id']] = question
 
 
@@ -150,6 +156,10 @@ def get_target_index(source_id, edge):
         #print(crop_text)
         minmax = crop_text.replace(' ','').replace('[', '').replace(']','')
         minmax = minmax.split(',')
+        
+        for q in range(len(minmax)):
+            minmax[q] = int(minmax[q])
+
         if edge['label'] != '':
             all_edges = graph['edges']
             other_answers = []
@@ -174,7 +184,7 @@ def get_target_index(source_id, edge):
                 for val in a_range:
                     if val not in cutoff_points:
                         cutoff_points += [val]
-
+            cutoff_points = sorted(cutoff_points)
 
 
             edge_range = edge['label']
@@ -193,8 +203,13 @@ def get_target_index(source_id, edge):
             for a_range in other_ranges:
                 print(a_range)
                 cutoffs += [int(a_range[1])]
-            cutoffs += [int(minmax[-1])]
-            question['answer_choices'] = json.dumps(cutoffs)
+            cutoffs += [int(minmax[1])]
+            if minmax[0] < cutoffs[0]:
+                cutoff_points.insert(0, minmax[0])
+            if minmax[1] > cutoffs[-1]:
+                cutoff_points += [minmax[1]] 
+
+            question['answer_choices'] = json.dumps(cutoff_points)
         
             for i in range(len(cutoff_points) - 1):
                 comp_range = cutoff_points[i:i+1]
