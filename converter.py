@@ -331,6 +331,17 @@ for condition in question_bank:
     r.rpush('disease:' + condition2id[condition] + ':questions', *question_ids)
     r.set('disease:' + condition2id[condition] + ':decision_tree', json.dumps(trees[condition]))
 
+for key in r.scan_iter():
+    if ":cond_vec" in key:
+        pass
+    else:
+        try: 
+            print key, r.get(key)
+        except:
+            try:
+                print r.lrange(key, 0, -1)
+            except:
+                print r.zrange(key, 0, -1)
 
 
 
