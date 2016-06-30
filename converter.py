@@ -34,7 +34,7 @@ for i in range(len(graph['nodes'])):
             start_index = question_text.index(']') + 1
             question_type = question_text[:start_index]
             question_type = question_type[1:-1].lower()
-            
+             
             question_type_string = 'free_text'
             if question_type == 'mc' or question_type == 'ms':
                 question_type_string = 'button'
@@ -315,18 +315,24 @@ def make_condition_name(condition):
     return condition_name
 
 for condition in question_bank:
-    questions = question_bank[condition]
-    for question in questions:
-
-        r.set('question:' + question['id'] + ':text', question['text'])
-        r.set('question:' + question['id'] + ':question_type', question['question_type'])
-        r.set('question:' + question['id'] + ':answer_choices', question['answer_choices']) 
-
+    questions_ids = question_bank[condition]
+    for question_id in questions_ids:
+        if question_id in questions: 
+            question = questions[question_id]  
+            r.set('question:' + question_id + ':text', question['text'])
+            r.set('question:' + question_id + ':question_type', question['question_type'])
+            if 'answer_choices' in question.keys():
+                r.set('question:' + question_id + ':answer_choices', question['answer_choices']) 
+        else:
+            print('NO QUESTION FOR: ' + question_id)
 
     r.set('disease:' +  condition2id[condition] + ':name', make_condition_name(condition))
-    questions = question_bank[condition] 
-    r.rpush('disease:' + condition2id[condition] + ':questions', *questions)
+    question_ids = question_bank[condition] 
+    r.rpush('disease:' + condition2id[condition] + ':questions', *question_ids)
     r.set('disease:' + condition2id[condition] + ':decision_tree', json.dumps(trees[condition]))
+
+
+
 
 '''
 id2condition = {}
