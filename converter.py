@@ -1,6 +1,7 @@
 import json
 import numpy
 import redis, os
+import cPickle as pickle
 
 graph_file = open('graph.json', 'rb')
 graph = json.loads(graph_file.read())
@@ -14,6 +15,7 @@ root2condition = {}
 trees = {}
 questions = {}
 question_bank = {}
+print_database = False
 
 for i in range(len(graph['nodes'])):
     node = graph['nodes'][i]
@@ -314,6 +316,9 @@ def make_condition_name(condition):
     condition_name = condition_name[0].upper() + condition_name[1:] 
     return condition_name
 
+symcat_to_disease_id = pickle.load(open('symcat_to_remedy_id.p', 'rb'))
+
+
 for condition in question_bank:
     questions_ids = question_bank[condition]
     for question_id in questions_ids:
@@ -325,23 +330,29 @@ for condition in question_bank:
                 r.set('question:' + question_id + ':answer_choices', question['answer_choices']) 
         else:
             print('NO QUESTION FOR: ' + question_id)
+    symcat_to_remedy_id = pickle.load(open('symcat_to_remedy_id.p', 'rb'))
+    symcat_id = condition
 
-    r.set('disease:' +  condition2id[condition] + ':name', make_condition_name(condition))
-    question_ids = question_bank[condition] 
-    r.rpush('disease:' + condition2id[condition] + ':questions', *question_ids)
-    r.set('disease:' + condition2id[condition] + ':decision_tree', json.dumps(trees[condition]))
-
-for key in r.scan_iter():
-    if ":cond_vec" in key:
-        pass
+    if symcat_id in symcat_to_remedy_id.keys():
+        remedy_id = str(symcat_to_remedy_id[symcat_id]) 
+        r.set('disease:' +  remedy_id + ':name', make_condition_name(condition))
+        question_ids = question_bank[condition] 
+        r.rpush('disease:' + remedy_id + ':questions', *question_ids)
+        r.set('disease:' + remedy_id + ':decision_tree', json.dumps(trees[condition]))
     else:
-        try: 
-            print key, r.get(key)
-        except:
-            try:
-                print r.lrange(key, 0, -1)
+        print(symcat_id + ' not in converter!')
+if print_database:
+    for key in r.scan_iter():
+        if ":cond_vec" in key:
+            pass
+        else:
+            try: 
+                print key, r.get(key)
             except:
-                print r.zrange(key, 0, -1)
+                try:
+                    print r.lrange(key, 0, -1)
+                except:
+                    print r.zrange(key, 0, -1)
 
 
 
