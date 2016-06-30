@@ -33,12 +33,13 @@ for i in range(len(graph['nodes'])):
             start_index = question_text.index(']') + 1
             question_type = question_text[:start_index]
             question_type = question_type[1:-1].lower()
-            if question_type == ('mc' or 'ms'):
+            
+            question_type_string = 'free_text'
+            if question_type == 'mc' or question_type == 'ms':
                 question_type_string = 'button'
             if question_type == 'slider':
                 question_type_string = 'slider'
-            else: 
-                question_type_string = 'free_text'
+           
             question['question_type'] = question_type_string
 
 
