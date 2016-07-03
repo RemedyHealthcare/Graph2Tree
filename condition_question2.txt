@@ -1,0 +1,1125 @@
+diverticulitis
+	[MC] Is there blood in your stool? [Yes, No]
+	[MC] Do you feel pain, cramping, or tenderness in the abdomen? [Yes, No]
+	[MS] Are you experiencing any of these symptoms? [Bloating, Constipation, Diarrhea, Indigestion, Flatulence, No]
+	[MC] Do you have a thermometer available to measure your temperature? [yes, no]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+diabetes
+	[MC] Do you feel tingling, pain, or numbness in your hands and/or feet? [Yes, No]
+	[MC] Has anyone in your family been diagnosed with diabetes? [Yes, No]
+	[MC] Are you obese? [Yes, No]
+	[MC] Do you have a dry mouth and/or itchy skin? [Yes, No]
+	[MC] Does your breath have a fruity or sweet odor? [Yes, No, Not sure]
+	[Test] Glucose levels
+	[Test] Insulin levels
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+	[MC] Are you losing weight? [Yes, No]
+	[MC] Has your food intake recently changed? [I have been eating less, I have been eating about the same amount as usual, I have been eating more]
+	[MC] Do your cuts and bruises take a long time to heal? [Yes, No]
+	[MC] Do you have blurred vision? [Yes, No]
+	[MC] Do you feel extremely fatigued? [Yes, No]
+	[MC] Do you often feel very hungry and/or very thirsty, even while eating and/or drinking? [Yes, No]
+	[MC] Do you urinate frequently? [Yes, No]
+pet-allergies
+	[MC] Do you live with any animals? [Yes, No]
+	[Text] What animal(s) do you live with?
+	[Test] [Skin Prick Test]
+	[Test] [Blood Test]
+	[MC] Have you experienced any shortness of breath or any breathing issues along with your other symptoms [Yes, No]
+	[MC] Do you have any known allergies? [Yes, No]
+	[Text] What allergies do you have?
+	[Text] What symptoms are you currently experiencing?
+	[MC] Do you experience these symptoms year-round, or just during certain months? [year-round, certain months]
+	[MS] Which season(s) of the year do you experience your symptoms? Select all that apply. [Spring, Summer, Fall, Winter]
+fibroadenoma
+	[Test] Abnormal histology [Breast needle biopsy]
+	[Test] Abnormal finding [Mammogram]
+	[Test] Abnormal finding [Breast Ultrasound]
+	[Test] Positive test [Blood or urine pregnancy test]
+	[Text] Have you had any pregnancies before?
+	[Text] What is your sex/gender?
+	[Slider] How old are you? [0,120,1]
+	[Text] Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe what brings you in?
+	[MS] Ok, just to clarify, can you check off any of the following you may have experienced? [Lump in breast, Pain or soreness in breast, Discharge from the nipple, Change in the size or shape of the breast]
+	[MS] Can you check off any of the following symptoms you may have experienced? [Unplanned weight loss, Unplanned weight gain, Bone pain, Mass in the arm, Back swelling, Hot flashes, Vaginal dryness]
+	[Text] Can you describe how the size or shape of the breast has changed?
+	[Text] Can you describe what the discharge looks and smells like?
+	[Slider] On a scale of 0 - 10 with 0 meaning no pain and 10 meaning the worst pain you can imagine, how much pain do you feel? [0,10,1]
+	[Text] Approximately how big is the lump?
+	[MC] Can you tell us which breast you noticed the change in? [Left, Right, Both]
+	[Text] How long ago did you first notice a change in your breast? Can you think of anything that may have triggered it?
+	[Text] Is there anything you do or take, or time of the day or month when your symptoms are better?
+	[Text] Is there anything you do or take, or time of the day or month when your symptoms are worse?
+	[Text] Can you list all medications you have tried?
+	[Text] Can you list all other medications, vitamins, hormones (or oral contraceptives), or supplements you regularly take?
+	[Text] Do you currently smoke tobacco and have you smoked in the past? If so, when did you stop (and quit, if you don't currently smoke). How much would you smoke in a typical day?
+	[Text] Please list any illicit drugs you may have used, and approximately when the last time you used them was.
+	[MC] Can you move the lump around or does the lump seem to be stuck in one spot? [I can move it around, It is stuck in one spot, Not sure]
+	[MS] Which of the following describe how the breast feels? [Edges are smooth, Edges are spiky, The lump can be compressed, The lump cannot be compressed, None of the above, Not sure]
+	[Text] Can you describe whether this lump has changed in size?
+	[Text] Are you sexually active?
+	[Text] Have you noticed any changes in your menstruation? How long does your period normally last?
+menopause
+	[Slider] How old are you? [0, 120, 1]
+	[MC] Do your breasts feel tender? [Yes, No]
+	[MC] What is your gender? [Male, Female, Female-to-male, Male-to-female]
+	[Text] How long has it been since your last menstrual cycle?
+	[MC] Are you experiencing irregular menses (ex. longer or shorter cycles)? [Yes, No, Not experiences menses]
+	[MC] Are you experiencing changes in mood or libido? [Yes, No]
+	[MS] Are you experiencing any of the following? [Vaginal dryness, Dry skin, Thinning hair, Loss of breast fullness, No]
+	[MC] Have you experienced any weight gain or weight loss? [Yes, No]
+	[MS] Are you experiencing any of the following? [Hot flashes, Night sweats, Palpitations, Sleep problems, No]
+anemia
+	[Test] Low reticulocyte count [Blood Test]
+	[Free Text] What is your ethnic background?
+	[Test] Low RBC count [Blood Test CBC]
+	[Test] Low iron in the body [Blood iron and Serum ferritin Tests]
+	[Test] Vitamin B12 and/or folate deficiency [Blood Test]
+	[MC] Do you use NSAIDs such as aspirin or ibuprofen? [Yes, No]
+	[Free Text] What is the dosage?
+	[Free Text] What do you take?
+	[MC] Have you experienced any other type of gastrointestinal condition in the past year? [Yes, No]
+	[Free Text] Please describe your condition.
+	[MC] Have you ever experienced gastrointestinal hemorrhoids? [Yes, No]
+	[MC] Have you ever experienced stomach ulcers? [Yes, No]
+gastroduodenal-ulcer
+	[Test] Visible ulcer after ingesting a liquid containing barium [X-Ray]
+	[Test] H. Pylori present in tissue sample [endoscope of esophagus, stomach, duodenum]
+	[Test] Breath sample that contains carbon dioxide after ingesting radioactive carbon and then blowing into a bag (carbon broken down by H. Pylori) [Breath sample]
+	[Test] H. Pylori present [Blood Sample]
+	[Test] H. Pylori present [urine sample]
+	[MC] Do you drink alcohol? [Yes, No]
+	[Text] Approximately how many drinks do you consume in the average week?
+	[MC] Do you smoke tobacco, or have you ever smoked tobacco? [Yes I currently smoke, Yes but I quit, No]
+	[MC] Do/did you live with someone who frequently smoked indoors? [Yes, No]
+	[MC] How long ago did you quit smoking? [Less than one month ago, 1 year ago, 2-5 years ago, 5-10 years ago, 10+ years ago]
+	[MC] How many packs do/did you smoke per day? [Less than 1 pack, 1 pack, 1-2 packs, 2+ packs]
+	[Text] How long did you live with them?
+	[MC] Do you have osteoporosis? [Yes, No]
+	[MC] Do you regularly use prescription medication such as bisphosphonates (Actonel, Fosamax, etc) or potassium supplements to relieve your symptoms? [Yes, No]
+	[MC] Do you regularly use pain relievers such as aspirin or ibuprofen? [Yes, No]
+	[MC] Are you experiencing any pain? [Yes, No]
+	[MC] Does anything make your pain go away? [Yes, No]
+	[MC] Does your pain ever disappear and then return for a few days or weeks? [Yes, No]
+	[Slider] On a scale of 1 to 10, 1 being no pain and 10 being the worst pain you have ever felt, what number would you say your pain is at right now? [1,10,1]
+	[MC] Does the pain get worse at night? [Yes, No]
+	[MC] Is the pain worse when your stomach is empty? [Yes, No]
+	[MS] Where is the pain felt? [Chest, Abdomen, Pelvis, Other]
+	[Text] Where is your pain felt other than the chest, abdomen and pelvis?
+	[MS] What makes your pain go away? [Medication (antacid, etc), Food, Beverage, Other]
+	[Text] What makes your pain go away?
+	[MC] Has there been any change in your appetite? [Yes, No]
+	[MC] Have you noticed any unexplained weight loss? [Yes, No]
+	[MC] Have you experienced any nausea? [Yes, No]
+	[MC] Have you experienced any vomiting? [Yes, No]
+	[MC]Have you seen any red or black blood in your vomit? [Yes, No]
+cystitis
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Have you ever been diagnosed with a urinary tract infection? [Yes, No]
+	[Test] Urine Analysis
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+	[MC] Do you feel any pelvic discomfort or pressure in your lower abdomen? [Yes, No]
+	[MC] Is your urine cloudy and/or foul-smelling? [Yes, No]
+	[MC] Is there blood in your urine? [Yes, No]
+	[MS] Have you noticed any of the following changes while urinating? [A strong and persistent urge, Burning sensations, Passing frequent small amounts of urine, No]
+cervical-cancer
+	[MC] Have you recently lost weight? [Yes, No]
+	[MC] Are you having trouble urinating? [Yes, No]
+	[MC] Are you experiencing ongoing leg, back, or pelvic pain? [Yes, No]
+	[MC] Have you been diagnosed with anemia? [Yes, No]
+	[MS] Are you experiencing any of the following symptoms? [Pain during sex, Abnormal vaginal discharge, Significant changes in your menstrual cycle, None]
+	[Text] Could you describe the color and odor of the discharge?
+	[MC] Are you experiencing abnormal vaginal bleeding? For example, bleeding between periods, after sex, or after menopause. [Yes, No]
+bursitis
+	[Text] Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe where you're experiencing symptoms?
+	[MS] Are you experiencing any of the following in your joints? [Aches, Stiffness, Pain when you move or press on the joint, Swelling or redness, Warmth, Restricted range of motion, None]
+	[Slider] How many days have you been experiencing these symptoms? [1, 365, 1]
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]
+diverticulosis
+	[MC] Is your diet high in fiber? [Yes, No]
+	[MC] Are you above the age of 60? [Yes, No]
+	[Test] CT Scan of abdominal region
+	[Test] Stool Test
+	[MC] Are you on any steroids, opiates, or NSAIDS (such as ibuprofen or aspirin)? [Yes, No]
+	[Text] What are you taking?
+	[Test] Liver function test
+	[Test] Blood and urine test to check for infection and rule out pregnancy.
+	[MC] Are you experiencing constipation or diarrhea? [Yes, No]
+	[MC] Are you experiencing nausea or vomiting? [Yes, No]
+	[MC] Are you experiencing lower abdominal pain? [Yes, No]
+	[MC] Which side are you experiencing the pain on, your left-hand side or right-hand side? [Yes, No]
+acute-kidney-injury
+	[MC] What is your gender? [male, female, male-to-female, female-to-male, other]
+	[Test] Ultrasound of the kidney
+	[Test] Urea and Creatinine BUN and Creatinine/BMP
+	[Test]  Urine Output Measurement
+	[MC] Have you noticed any swelling in your lower body, for example in your lower extremities? [Yes, No]
+	[MC] Have you noticed a difference in your daily urine output? [Increase in urine output, Decrease in urine output, No change]
+	[Test] Electrolytes, Glucose abnormalities [CMP Blood test]
+	[Test] Abnormal findings [Renal biopsy]
+	[Test] Abnormal findings [KUB Xray]
+	[Test] Abnormal findings [KUB Ultrasound]
+	[Test] Abnormal findings [Non-contrast CT]
+	[Test} Abnormal findings [Urine analysis]
+	[Test] CBC, differential, BUN, Cr [Blood test]
+	[Slider] How old are you? [0,120,1]
+	[Test] High or low blood pressure [BP Cuff]
+	[Test] Fever [Thermometer]
+	[Text] Hi, sorry to hear you're not feeling well, but we'll do our best to figure out what is going on as soon as possible. In a few words, can you tell us what's been going on?
+	[MS] Ok, just to clarify, can you check off any of the following symptoms that you are experiencing? Please check off all that apply. [Headache, Feeling more tired  or weaker lately, Nausea, Vomiting, Dizziness, Feeling less hungry, Shortness of breath, Sharp pain in your belly, Sharp pain in your chest]
+	[Media] Can you mark where the pain in on the picture below?
+	[Text] When was the last time you peed, and can you describe what your urine looked like? What color was it? Was it frothy? Was there blood?
+	[Text] Did your urine have a particular smell?
+	[Slider] On a scale of 0 - 10 with 0 meaning no pain and 10 meaning the worst pain you can imagine, how much does it hurt when you pee? [0, 10, 1]
+	[Text] Have you noticed any changes in your scrotum or testes? If so, can you describe this? If this question is not applicable, please write N/A.
+	[MC] Do you feel like your arms and legs look more swollen lately? [Yes, No, Not sure]
+	[Test] Do you feel any masses in your lower back or your sides?
+	[Text] How long ago did these symptoms start?
+	[MC] Since this started, have your symptoms gotten better, worse, or stayed about the same? [Gotten better, Gotten worse, Stayed about the same]
+	[Text] Can you think of anything that may have triggered this?
+	[Text] How much water do you drink in one day?
+	[Text] Is there anything you do, medications you take, or a specific time of the day when your symptoms are worse?
+	[MC] Is there anything you do, medications you take, or a specific time of the day when your symptoms are better? [Yes, No]
+	[Text] Can you tell us what you ate today and last night?
+	[Text] Do you have any medical conditions? [Yes, No]
+	[Text] What medical conditions do you have?
+	[MC] Have you ever had any surgeries? [Yes, No]
+	[Text] What surgeries have you had performed?
+	[Text] Have you had any imaging tests done recently (like Xray or CT)? If so, please write which ones and when.
+	[Text] Please write down any medications, vitamins, or supplements you take.
+	[MC] Have you noticed any rashes on your body that started around the time you got sick? [Yes, No, Not sure]
+	[MC] Do you smoke tobacco, or have you ever smoked tobacco? [Yes I currently smoke, Yes but I quit, No]
+	[Text] Have you ever used any illicit drugs (like marijuana, cocaine, heroin)? If so, please list any you have taken as well as approximately when you last took them. We will completely respect your privacy, and your response will only be shared with your doctor so we can make sure we give you the best possible care!
+	[MC] How many packs do/did you smoke per day? [Less than 1 pack, 1 pack, 1-2 packs, 2+ packs]
+	[MC] How long ago did you quit smoking? [Less than one month ago, 1 year ago, 2-5 years ago, 5-10 years ago, 10+ years ago]
+	[MC] Press down on the area below your belly but above your groin (as shown in the picture below). Do you feel a mass? [Yes, No, Not sure]
+	[Text] Can you describe what this rash looks like?
+	[Slider] We are now going to check your breathing. Are you near a clock? Try to count how many times you breathe in 30 seconds. Keep breathing as you would normally! [1,40,1]
+	[Slider] Good work! Now let's try to measure your pulse. You should be able to find this on your upper wrist. This picture might help you locate it. Got it? Great! Now, try to count how many times you feel your pulse in 30 seconds. Ready, set, go! [5,100,1]
+acute-bronchiolitis
+	[MC] Have you taken the flu vaccine this year? [Yes, No, Not Sure]
+	[MC] Which of the following vaccines are you up to date on? Check all that apply. [Pneumococcus (PCV7 or PCV 13 or PPSV23), Haemophilus influenza (Hib), Pertussis (DTaP or Tdap), Not sure]
+	[Test] Positive growth [Urine culture]
+	[Test] Abnormal findings [Sputum culture]
+	[Test] Abnormal findings [Urine culture]
+	[Test] Abnormal findings [CBC blood test]
+	[Test] Positive growth [Blood culture]
+	[Slider] Now let's try to measure your pulse. You should be able to find this on your upper wrist. This picture might help you locate it. Got it? Great! Now, try to count how many times you feel your pulse in 30 seconds. Ready, set, go! [5,100,1]
+	[Slider] We are now going to check your breathing. Are you near a clock? Try to count how many times you breathe in 30 seconds. Keep breathing as you would normally! [1,40,1]
+	[Test] Abnormal heart sounds [Stethoscope]
+	[Test] Abnormal findings [EKG]
+	[Test] Abnormal lung sounds [Stethoscope]
+	[Text] Abnormal findings [Chest Xray]
+	[Test] Positive test [Blood or urine pregnancy test]
+	[Slider] How old are you? [0,120,1]
+	[Text] Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe what has been going on?
+	[MS] Ok, just to clarify, can you check off whether any of the following symptoms are bothering you? You can check off all those that apply. [Cough, Wheezing, Shortness of breath or trouble breathing, Nasal congestion, Sore throat, Sharp chest pain, Fever]
+	[Text] Do you have any medical conditions, and if so which ones?
+	[Test] Elevated temperature [thermometer]
+	[Test] Elevated temperature [Thermometer]
+	[MC] When you cough, do you produce sputum (mucus and spit)? [Yes, No]
+	[Text] Do you work, and if so, what do you do?
+	[Text] Have you travelled anywhere (either in or out of the country) in the past year, and if so, where?
+	[MC] Do you have any pets? [Yes, No]
+	[Text] Do you have any allergies, and if so, which ones?
+	[Text] Do you take any medications, vitamins, or supplements, and if so, which ones?
+	[Text] Can you tell us more about the chest pain?
+	[Text] How long and how often is the wheezing?
+	[Text] How long and how often does your shortness of breath last?
+	[Text] How long and how often is your cough?
+	[Slider] On a scale of 1 - 10 with 1 meaning not too bad and 10 meaning the worst you can imagine, how sick do you feel? [1,10,1]
+	[Slider] On a scale of 1 - 10 with 1 meaning not too bad and 10 meaning the worst cough you can imagine, how bad is the cough? [1,10,1]
+	[Text] How long ago did these symptoms start?
+	[Text] When you cough, do you often produce sputum, and if so, can you describe what it looks and smells like?
+	[MC] Can you think of anything that might have triggered this? [Yes, No]
+	[MC] Is there anything you do, anywhere you go, or a specific time of the day when your symptoms are worse? [Yes, No]
+	[MC] Is there anything you do, anywhere you go, medications you take, or a specific time of the day when your symptoms are better? [Yes, No]
+	[Text] What makes your symptoms better?
+	[Text] What makes your symptoms worse?
+	[Slider] How old are you? [0,120,1]
+	[Text] Have you had unprotected sex (either anal, oral, or vaginal sex without a condom) since you last got tested for a sexually transmitted infection (or ever, if you have never been tested for a sexually transmitted infection)?
+	[Slider] How many months is the baby? [0,35,1]
+	[MC] Have you ever smoked tobacco? [Yes, No]
+	[Text] Have you ever had any sexually transmitted infections, and if so, did you receive treatment for these?
+	[Text] What type of infection(s) and what type of treatment did you have?
+	[MC] Have you ever lived with someone who smoked tobacco? [Yes, No]
+	[Text] When did you start smoking and, if you don't currently smoke, when did you quit? Approximately, how many packs would you smoke in a typical day? Please also mention if you live with someone who smokes.
+	[MC] Did they often smoke indoors and/or in your presence? [Yes, No]
+	[MC] Has the baby been vomiting lately? [Yes, No]
+	[MC] Has the baby been more irritable lately? [Yes, No, Not sure]
+	[MC] Have you noticed a change in your child's appetite lately? [Increase in appetite, Decrease in appetite, No change]
+	[MC] Has the baby been tugging at his/her ear? [Yes, No, Not sure]
+	[Text] Can you take a look at the ear and see if you notice any fluid. If there is fluid, can you describe it?
+	[Text] Please describe the vomit.
+	[Text] What might have triggered this?
+	[Text] What type of pet(s) do you have?
+	[MS] Can you describe what the sputum (or spit) looks like? Check all that apply. [Clear and thin, Milky white, Milky yellow, Green, Bubbly, Currant jelly-like, Rust-color, Dark brown, Blood (or red) flecks, Pink and frothy]
+	[MC] Have you noticed a change in the smell of your sputum (or spit)? [Yes it smells bad, No it is about the same, Not sure]
+chronic-bronchitis
+	[MC] Do you have a cough? [Yes, No]
+	[MC] Would you describe your cough as wet or dry? [Wet, Dry]
+	[MC] Have you been coughing up mucus and/or spit (sputum)? [Yes, No]
+	[MS] Can you describe what the sputum (or spit) looks like? Check all that apply. [Clear and thin, Milky white, Milky yellow, Green, Bubbly, Currant jelly-like, Rust-color, Dark brown, Blood (or red) flecks, Pink and frothy]
+	[MC] Do you smoke tobacco or have you smoked tobacco in the past? [Yes but I quit, Yes I still smoke, No I have never smoked]
+	[Slider] How many years ago did you quit smoking? [1, 75, 1]
+	[MC] Do you live with/have you lived with someone who frequently smokes? [Yes, No]
+	[MC] How many packs do/did you smoke per day? [Less than 1 pack, 1 pack, 1-2 packs, 2+ packs]
+	[Slider] How many years have you lived with them? [1, 75, 1]
+	[MC] Have you experienced any wheezing (high-pitched whistle sound while breathing)? [Yes, No]
+	[MC] Does it get increasingly worse with physical activity such as walking, running, or climbing stairs? [Yes, No]
+	[MC] Do you work in an environment that is constantly exposed to air pollutants (such as a factory)? [Yes, No]
+	[MC] Do you have a history of asthma? [Yes, No]
+	[Test] Lung sounds [Stethoscope]
+	[Test} Percentage of air inhaled and exhaled [Pulmonary Function Test via spirometer]
+	[MC] Have you had any signs of a fever in the past week? [Yes, No]
+	[Text] Have you had any serious and diagnosed respiratory illnesses in the past, such as pneumonia, pertussis, etc.?
+	[MC] Do you have a history of bronchitis? [Yes, No]
+	[Test] Absence of bacteria in sputum [Sputum Cytology Analysis]
+	[MC] Have you experienced any shortness of breath and/or difficulty in breathing? [Yes, No]
+	[MC] How long have you been experiencing this cough? [Less than 1 Week, Less than 1 Month, 6 Months, 1 Year]
+	[Test] Absence of pneumonia-causing bacteria in the lungs [Chest X-Ray]
+acute-sinusitis
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills or feeling unusually hot/feverish? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Have you been having trouble with your vision or eye movements? [Yes, No]
+	[Test] CT Contrast
+	[MC] Have you used over the counter decongestant medication? [Yes, No]
+	[MC] Do you feel congested or have a stuffy nose? [Yes, No]
+	[MC] Have you had nasal discharge (mucus)? [Yes, No]
+	[MC] Sorry to hear you are not feeling well! How long have these symptoms been going on for? [Less than 2 weeks, 2-4 weeks, More than 4 weeks]
+	[Test]  Rhinoscopy
+	[MC]Have you gotten better then suddenly got worse [yes,no]
+	[Text] Can you describe its appearance?
+	[MC] Do you have a headache? [Yes, No]
+	[MC] Is the pain located throughout your head or in a particular part of it? [Throughout, Part]
+	[Slider] On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? [1,10,1]
+	[Text] Could you describe for me where the pain is?
+	[MC] Do you facial pain or pressure? [Yes, No]
+	[MC] Is the facial pain worse when you lean forward? [Yes, No]
+	[MC] Do you have tooth discomfort? [Yes, No]
+	[MC] Do you have ear pressure or pain? [Yes, No]
+	[Test] Ear examination [Otoscope]
+	[MC] Have you noticed a change in your voice? [Yes, No]
+	[MC] Have you had nasal discharge (mucus)? [Yes, No]
+	[Test] Anterior rhinoscopy [Nasal speculum, Otoscope]
+	[Test] Palpate sinuses
+	[Test] Examine oropharynx [Penlight]
+cataract
+	[Slider] How old are you?[0,120,1]
+	[MC] Do you have a history of diabetes, eye trauma, or steroid use? [Yes, No]
+	[Test] Fundus exam [Ophthalmoscope]
+	[MC] Do you have any eye pain? [Yes, No]
+	[MC] Have you noticed a change in your vision? [Yes, No]
+	[MC] Do you have spots or clouds in your vision? [Yes, No]
+	[MC] Are you experiencing nearsightedness? [Yes, No]
+	[MC] Are you having trouble with night driving or reading fine print? [Yes, No]
+chronic-kidney-disease
+	[MC] Do you often feel cold, even in a warm room? [Yes, No]
+	[MC] Do you have trouble concentrating? [Yes, No]
+	[MC] Have you noticed any abnormal tastes in your mouth? [Yes, No]
+	[Text] Could you please be more specific?
+	[MS] Are you experiencing any of the following? [Chest pain, Shortness of breath, High blood pressure, None]
+	[MC] Have you had changes in your urine output? [Yes, No]
+	[MC] Is there blood or foam in your urine? [Yes, No]
+	[Text] Could you please be more specific about any other changes in urination you may be experiencing?
+	[MS] Are you experiencing any of the following symptoms? [Loss of appetite, Fatigue, Weakness, Problems sleeping, Hiccups, Itching, Muscle twitches and cramps, Swollen feet and ankles, None]
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+chronic-sinusitis
+	[MC] Sorry to hear you are not feeling well! How long have these symptoms been going on for? [Less than 2 weeks, 2-4 weeks, More than 4 weeks]
+	[Test]  Rhinoscopy
+	[MC]Have you gotten better then suddenly got worse [yes,no]
+	[MC] Have you been having trouble with your vision or eye movements? [Yes, No]
+	[Test] CT Contrast
+	[Test] Anterior rhinoscopy [Nasal speculum, Otoscope]
+pneumonia
+	[Test] Heart sounds [Stethoscope]
+	[Test] Lung sounds [Stethoscope]
+	[MC] Vaccines can prevent certain pneumonias. Which of the following vaccines are up to date? Check all that apply. [Pneumococcus (PCV7 or PCV 13 or PPSV23), Haemophilus influenza (Hib), Pertussis (DTaP or Tdap), Not sure]
+	[Test] Percuss abdomen [Stethoscope]
+	[Text] Do you remember when you first felt sick? Can you think of anything that changed around that time? Anything that may have triggered your illness?
+	[MC] Since you have been sick, have you been vomiting? [Yes often, Yes but only once or twice, No]
+	[Test] Legionella urine antigen [Urine]
+	[MC] Do you have a history of MRSA infection (for example, on your skin)? [Yes, No, Not sure]
+	[Test] Protein, LDH, pH, Culture of exudate [Aspiration of exudate]
+	[Test] Low albumin, high or low glucose, elevated liver function tests, elevated BUN [Complete metabolic panel]
+	[Test] Blood pressure [Sphygmomonometer]
+	[MC] Great job so far! We are now going to check your belly. First find the bottom-right edge of your left rib cage. Now, press down. This picture might help you figure out where.  Take a deep breath in and out. And again, in and out. Feel anything? [Yes, No, Not sure]
+	[MC] Have you noticed that your spit (sputum) has been looking differently recently? [Yes, No]
+	[MS] Can you describe what the sputum (or spit) looks like? Check all that apply. [Clear and thin, Milky white, Milky yellow, Green, Bubbly, Currant jelly-like, Rust-color, Dark brown, Blood (or red) flecks, Pink and frothy]
+	[MC] Are you on mechanical ventillation? [Yes, No]
+	[MC] Do you have a history of HIV or AIDS? We know this is can be a very private topic, but everything you share is completely confidential, and only your doctor will see what you write. [Yes HIV+, Yes AIDS, No]
+	[Text] Which countries and US states have you travelled to during the past 18 months?
+	[MC] Have you noticed a change in the smell of your sputum (or spit)? [Yes it smells bad, No it is about the same, Not sure]
+	[MC] Have you been having diarrhea? [Yes, No]
+	[Test] Oxygen saturation [Pulse oximeter]
+	[Test] Positive culture [Sputum culture]
+	[MC] Have you been sweating more than usual? [Yes, No, Not sure]
+	[MC] Have you had chills or shivers? [Yes, No, Not sure]
+	[MC] Have you had a sore throat in the past month [Yes more than 2 weeks ago, Yes between 1 - 2 weeks ago, Yes this week, No]
+	[MC] Sorry to hear you are not feeling well! How long have these symptoms been going on for? [Less than 2 weeks, 2 - 4 weeks, more than 4 weeks]
+	[Slider] Can you be more specific? Approximately how many days have you had these symptoms? [1,14,1]
+	[MC] Have you been having trouble breathing? [Yes, No]
+	[MC] Is it especially hard to breathe at certain times of the day? [Yes it is worst in the morning, Yes it is worst at night, Yes it is worst when I'm working or exercising, No it's about the same throughout the day]
+	[MC] Sorry to hear that! Has it been getting harder to breathe recently, or has it stayed about the same? [It's been getting harder, It has stayed about the same]
+	[Slider] One a scale of 1 to 10 with 10 meaning that you find it impossible to breathe and 1 meaning that you are having no trouble breathing, can you rate how tough it is to breathe? [1,10,1]
+	[Test] CBC and differential
+	[MS] Do any of these apply to you? Check all that apply. [Grunting while breathing, Flaring of your nostrils while breathing, Chest or abdominal muscles being pulled in while breathing]
+	[MC] Have you taken any antibiotics since you got sick? [Yes, No]
+	[MC] Do you take any other medicines? [Yes, No]
+	[MC] Were you prescribed a course of antibiotics that you have not been able to complete? [Yes, No]
+	[Text] Which antibiotics have you taken?
+	[MC] Have you taken antibiotics any other time in the past 6 months? [Yes, No]
+	[Text] What antibiotics were you unable to complete?
+	[Text] What do you take?
+	[Text] How about other herbal medicines or vitamins and supplements?
+	[MC] Have you been hospitalized within the past 6 months [Yes, No, Not sure]
+	[MC] Do you get treatment at a dialysis center regularly? [Yes, No]
+	[MC] Do you live in a nursing home? [Yes, No]
+	[Slider] We are now going to check your breathing. Are you near a clock? Try to count how many times you breathe in 30 seconds. Keep breathing as you would normally! [1,40,1]
+	[Slider] Good work! Now let's try to measure your pulse. You should be able to find this on your upper wrist. This picture might help you locate it. Got it? Great! Now, try to count how many times you feel your pulse in 30 seconds. Ready, set, go! [5,100,1]
+	[Test] Fever [thermometer]
+	[Slider] How old are you?[0,120,1]
+	[MS] Have you ever had any of the following conditions? Check all that apply. [Heart failure, Nerve disease, Stroke, Tuberculosis, COPD]
+	[MC] Ok, we are going to ask you a couple questions about you sexual history. We ask these because certain sexually transmitted infections increase the risk of you catching other infections (that may be making you sick), and we want to see whether you might be at risk. But, first of all, have you ever had sex? Oral, vaginal, and anal sex all count. [Yes, No]
+	[MC] Have you felt more confused or drowsy recently? [Yes, No, Not sure]
+	[MC] Do you have a history of cystic fibrosis? [Yes, No]
+	[MC] Do you smoke tobacco or have you smoked tobacco in the past? [Yes but I quit, Yes I still smoke, No I have never smoked]
+	[MC] Does the child have any fluid coming from their ear? [Yes, No, Not sure]
+	[Test] Chest Xray
+	[Test] Chest Xray
+	[MC] Have you felt sharp chest pain? [Yes, No]
+	[MC] Do you have a headache that started around when you got sick? [Yes, No, Not Sure]
+	[MC] Does the child attend day care or pre-school? [Yes, No]
+	[Slider] Try timing how many breaths you take in 1 minute. [5,80,1]
+	[Slider]How many weeks is the baby?[0,52,1]
+	[Test] Positive culture [Urine culture]
+	[MC] Was the birth mother positive for Cytomegalovirus (CMV) during pregnancy? [Yes she was positive, No she was negative, This was never checked, Not sure]
+	[MC] Was the birth mother positive for Herpes Simplex Virus (HSV) during pregnancy? [Yes and she was treated with antibiotics, Yes but she was not treated with antibiotics, No she tested negative for HSV, This was never tested in a pre-natal visit, Not sure]
+	[MC] Was the birth mother positive for Chlamydia trachomatis during a prenatal visit [Yes and she was treated with antibiotics, Yes but she was not treated with antibiotics, No she tested negative for Chlamydia, This was never checked, Not sure]
+	[Test] Bacterial growth [blood culture]
+	[MC] Sorry to hear your baby is not well! Was your baby born via C-section? [Yes, No, Not sure]
+	[MC]Was the baby born more than 18 hours after membrane rupture?[yes, no, not sure]
+	[MC] Was the birth mother positive for Group B Streptococci (GBS) in weeks 35 - 37 of pregnancy[Yes and she received an antibiotic during labor, Yes but she did not receive an antibiotic during labor, No but she received an antibiotic during labor, No and she did not receive an antibiotic during labor, I am not sure]
+	[MC] Did the birth mother have GBS during a previous pregnancy[yes, no and this is not her first pregnancy, no and this is her first pregnancy]
+	[MC]Did the birth mother have a fever during labor? [yes, no, not sure]
+	[MC] Did the baby have an eye infection previously? [Yes, No, not sure]
+	[Test] CSF culture
+	[MC] Have any of his or her classmates been sick recently? [Yes, No, Not sure]
+	[Slider] Sorry to hear that! On a scale of 1-10, with 1 meaning you barely feel it and 10 meaning it is the most painful headache of your life, how would you rate your headache? [1,10,1]
+	[MC] Do you have muscle pain throughout your body that started recently? [Yes, No]
+	[Text] Can you describe or show us where this pain is and whether it seems to spread anywhere? Feel free to use the picture below.
+	[Text] Can you describe what this fluid looks or smells like?
+	[MC] How many packs did/do you smoke per day? [Less than 1 pack, 1 pack, 2 packs, 3 packs, 4+ packs]
+	[Slider] How many years have you smoked for/did you smoke for? [0,75,1]
+	[MC] That's great! When did you quit? [This month, this year, 1-5 years ago, 5-10 years ago, >10 years ago]
+	[Slider] How many cigarettes did/do you smoke per day? [1, 25, 1]
+	[MC] Do you have or have you ever had a sexually transmitted infection? [Yes, No, Not sure]
+	[MC] Have you ever had unprotected sex (without a condom)? [Yes, No]
+	[MC] Do you know if your partner had a sexually transmitted infection? [Yes he did, No he did not, Not sure]
+	[Text] Have you received any treatment for this, and if so, what specifically?
+ovarian-cyst
+	[MC] Do you have a thermometer available to measure your temperature? [yes, no]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+	[MC] Are you experiencing pain during bowel movements or pressure on your bowels? [Yes, No]
+	[MC] Are you experiencing pelvic and/or abdominal pain? This pain may also radiate to the back and thighs. [Yes, No]
+	[Slider] On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? [1,10,1]
+	[MC] Is this pain present during sexual intercourse? [Yes, No]
+	[MC] Is this pain present shortly before your period begins or just before it ends? [Yes, No, Not sure]
+fibromyalgia
+	[Text] Hi, sorry to hear you are not feeling well, but we will do our best to figure out what is going on. In a few words, can you describe what's been going on?
+	[MS] Okay, to clarify, can you check off any symptoms that may be bothering you from the list below? [Muscle pain, Feeling more tired than usual, Trouble sleeping, Trouble remembering things, Numbness or tingling, Sensitivity to lights, Sensitivity to loud noises, Headache, Diarrhea, Constipation, Trouble controlling your urine]
+	[Media] Sorry to hear you are in pain.
+noninfectious-gastroenteritis
+	[MC] Do you have any chills? [Yes, No]
+	[Slider] How old are you?[0,120,1]
+	[MC] Do you have any nausea? [Yes, No]
+	[MC] Do you have any abdominal pain? [Yes, No]
+	[Text] What does the pain feel like?
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Have you eaten any raw or undercooked foods? [Yes, No]
+	[MC] Have you had any diarrhea? [Yes, No]
+	[MC] Is there any blood in your stool? [Yes, No]
+	[Text] Can you describe the appearance of your bowel movements?
+	[MC] Have you been vomiting? [Yes, No]
+	[MC] Is it bloody? [Yes, No]
+	[Text] Can you describe the appearance of your vomit?
+	[MC] Do you have a history of celiac disease (intolerance to gluten)? [Yes, No]
+	[MC] Do you have a history of Inflammatory Bowel Disease? [Yes, No]
+	[MC] Do you have any food allergies? [Yes, No]
+glaucoma
+	[Test] Measure intraocular pressure (IOP) [Tonometry]
+	[Test] Comprehensive eye exam
+	[Test] Fundus exam [Ophthalmoscope]
+	[Test] Slit lamp exam
+	[Test] Gonioscopy
+	[MC] Have you noticed a change in the appearance of your eye? [Yes, No]
+	[MC] Is your pupil (the dark circle in the middle) wider than it usually is? [Yes, No]
+	[MC] Do you have any cloudiness in the middle of your eye? [Yes, No]
+	[MC] Do you have any redness surrounding your eye? [Yes, No]
+	[MC] Do you have severe eye pain? [Yes, No]
+	[MC] Have you had any nausea or vomiting? [Yes, No]
+	[MC] Do you have a headache? [Yes, No]
+	[MC] Have you noticed a change in vision? [Yes, No]
+	[MC] Do you notice blurriness in some of your visual field? [Yes, No]
+	[MC] Do you see halos around lights? [Yes, No]
+	[MC] Do you have a decrease in vision? [Yes, No]
+	[MC] Have you noticed a sudden change in vision accompanied by eye pain, redness, headache, or nausea/vomiting? [Yes, No]
+	[Text] Seek immediate attention. This is a medical emergency!
+ulcerative-colitis
+	[Test] Chem 7
+	[Test]  ESR
+	[Test] CRP
+	[Slider] How old are you? [1,120,1]
+	[Test] Colonoscopy
+	[MC] I'm going to ask you to perform a quick test. Can you press on your abdomen? Are you feeling tenderness? [Yes, No]
+	[MS] Where in the attached picture are you feeling the tenderness? https://drive.google.com/open?id=0B5bef5sgoQOORWFvaWJ4Q2E4U1E [Right Upper Quadrant, Left Upper Quadrant, Right Lower Quadrant, Left Lower Quadrant, None of the above]
+	[Text] Could you describe the location of pain you are feeling?
+	[MS] Are you experiencing any of the following? [Nausea, Vomiting, Fever, Weight loss, No]
+	[MC] Are you experiencing joint pain [Yes, No]
+	[MC] Do you have a history of arthritis? [Yes, No]
+	[MS] Are you experiencing any of the following? [Weakness, Fatigue, Dizziness, No]
+	[Test] Stool cultures
+	[Test] Sigmoidoscopy
+	[Test] Fecal Lactoferrin
+	[Test] CBC
+	[MS] Are you experiencing any of the following? [Diarrhea, Rectal bleeding, Blood in your stool, Mucus in your stool, Increased urge to evacuate your bowels, Abdominal cramping, Abdominal pain, No]
+	[MC] Do you have a history of Inflammatory Bowel Disease? [Yes, No]
+cariomyopathy
+	[Test] Chest X-ray
+	[Test] Echocardiogram
+	[Test] ECG
+	[MS] Are you experiencing any of the following symptoms? [Breathlessness with exertion or rest, Swollen legs or feet, Bloated abdomen, Coughing while lying down, Fatigue, None]
+	[MC] Do you feel dizzy or lightheaded? {Yes, No]
+	[MC] Have you fainted? [Yes, No]
+	[Text] For how long?
+	[MC] Are your heartbeats irregular? They may feel rapid, pounding, or fluttering. [Yes, No]
+	[MC] Are you experiencing chest pain? [Yes, No]
+	[Test] How long have you been experiencing this pain?
+abdominal-hernia
+	[MC] Have you heavily strained your muscles in any way recently (such as heavy lifting, giving birth, etc)? [Yes, No]
+	[Text] Can you describe the muscle-straining action?
+	[Test] Abdominal Ultrasound
+	[Test] Abdominal X-Ray
+	[MC] Can you feel any protruding lumps/bumps in your abdominal region? [Yes, No]
+	[Text] Can you describe the shape/feel of the lump?
+	[Slider] On a scale of 1-10, can you rate your pain? [1, 10, 1]
+	[MC] Is the pain you feel in your abdomen sharp and concentrated in one area, or radiating and hard to pinpoint? [sharp and concentrated, radiating and hard to pinpoint]
+flu
+	[MC] Have you taken any anti-inflammatory drugs, such as ibuprofen or aspirin, since getting sick? [Yes, No]
+	[Text] Do you have a history of any medical conditions? Which ones?
+	[Text] Do you have a history of any surgeries?
+	[Text] Which countries and US states have you travelled to during the past 18 months?
+	[MC]  Have you taken any antibiotics or antivirals since you got sick? [Yes, No]
+	[Text] What have you taken?
+	[Text] Do you take any other medicines? Which ones?
+	[Text] What do you take?
+	[Text] How about other herbal medicines or vitamins and supplements?
+	[Test] Percuss abdomen [Stethoscope]
+	[Test] Lung sounds [Stethoscope]
+	[Test] Heart sounds [Stethoscope]
+	[Test] Oxygen saturation [Pulse oximeter]
+	[Slider] How old are you?[0,120,1]
+	[MC] Do you smoke tobacco or have you smoked tobacco in the past? [Yes but I quit, Yes I still smoke, No I have never smoked]
+	[MC] Ok, we are going to ask you a couple questions about your sexual history. We ask these because certain sexually transmitted infections increase the risk of you catching other infections, and we want to see whether you might be at risk. But, first of all, have you ever had sex? Oral, vaginal, and anal sex all count. [Yes, No]
+	[MC] Do you have or have you ever had a sexually transmitted infection? [Yes, No, Not sure]
+	[MC] Have you ever had unprotected sex (without a condom)?  [Yes, No]
+	[MC] Do you know if your partner had a sexually transmitted infection? [Yes they did, No they did not, Not sure]
+	[Slider] How many years did you smoke for? [0,75,1]
+	[Slider] How many years have you smoked for? [0,75,1]
+	[Slider] Approximately how many cigarettes do you smoke in a day? [1,50,1]
+	[Slider] Approximately how many cigarettes do you smoke in a day? [1,50,1]
+	[MC] Do you have a history of HIV or AIDS? We know this is can be a very private topic, but everything you share is completely confidential, and only your doctor will see what you write. [Yes HIV+, Yes AIDS, No]
+	[Test] Positive test [Monospot test]
+	[Test] Consolidation [Chest Xray]
+	[Test] Positive Rapid Influenza Diagnostic Test [RIDT Kit]
+	[Test] WBC Elevation [CBC with differential blood test]
+	[MC] Do you know if anyone you spend a lot of time with (like your family, for example) has been sick with the flu recently? [Yes, No, Not sure]
+	[MC] Have you taken the flu vaccine this year? [Yes, No, Not Sure]
+	[MS] Which of the following other vaccines are you up to date on? Check all that apply. [Pneumococcus (PCV7 or PCV 13 or PPSV23), Haemophilus influenza (Hib), Pertussis (DTaP or Tdap), Not sure]
+	[Test] Elevated temperature [Thermometer]
+	[Test] Positive test [Monospot test]
+	[Slider] Sorry to hear you are not feeling well! How long (in days) have you felt sick for? [1,45,1]
+	[MC] Since you first felt sick, have your symptoms gotten better, worse, or stayed about the same? [They are getting better, They are getting worse, They have been about the same]
+	[MC] Does anything make you feel worse? [Yes, No, Not Sure]
+	[MC] Is there anything that you have tried that helps you feel better? [Yes, No, Not Sure]
+	[MC] Do you have muscle pain all over your body? [Yes, No]
+	[MC] Have you had diarrhea? [Yes, No]
+	[MC] Do you feel any pain in your belly? [Yes, No]
+	[MC] Have you had a runny nose? [Yes, No]
+	[MC] Do you have a sore throat? [Yes, No]
+	[MC] Do you have a headache that started around the time you got sick? [Yes, No]
+	[MC] Do you have a cough? [Yes, No]
+	[MC] Do you feel like you have a fever? [Yes I have checked my temperature at home and I have a fever, Yes I haven't checked my temperature at home but I feel warm, No I checked my temperature at home and I don't have a fever, No I haven't checked my temperature at home but I don't think I have a fever, Not sure]
+	[Slider] On a scale of 1 - 10 with 1 meaning that you cough rarely and 10 meaning that you cough all day, how bad is the cough? [1,10,1]
+	[MC] Is the cough a dry cough or does sputum (or spit) come up? [Dry cough, Sputum comes up]
+	[MC] Is the cough a dry cough or does sputum come up? [Dry cough, Sputum comes up]
+	[Text] Can you describe what the sputum you cough up looks like?
+	[Slider] On a scale from 1 - 10 with 1 meaning no pain and 10 meaning the worst pain you can imagine, how bad is the headache? [1,10,1]
+	[MC] Is the headache located in a particular part of your head, or is it throughout your entire head? [Part of head, Entire head
+	[Text] What part of your head is it located at?
+	[Text] Can you tell me more about your sore throat? Are you having trouble swallowing food or water or speaking?
+	[MC] Can you describe what the fluid from your nose looks like? Check all that apply. [Watery, Solid, Slimy, Clear, Yellow, Green]
+	[MC] We are now going to check your belly. First find the bottom-right edge of your left rib cage. Now, press down. This picture might help you figure out where.  Take a deep breath in and out. And again, in and out. Feel anything? [Yes, No, Not sure]
+	[Slider] On a scale from 1 - 10 with 1 meaning no pain and 10 meaning the worst pain you can imagine, how bad is the pain? [1,10,1]
+	[Slider] Sorry to hear that! On a scale from 1 - 10 with 1 meaning no pain and 10 meaning the worst pain you can imagine, how bad is the muscle pain you are feeling? [1,10,1]
+	[Text] What makes you feel better?
+	[Text] What things make you feel worse?
+rheumatoid-arthritis
+	[MC] Are you obese? [Yes, No]
+	[MC] Have you had previous joint injury? [Yes, No]
+	[Slider] How old are you? [0,120,1]
+	[MC] Do you have a decreased range of motion? [Yes, No]
+	[MC] Are you experiencing redness and/or swelling around your joints? [Yes, No]
+	[MC] Do your joints feel stiff? [Yes, No]
+	[MC] Is the stiffness worse in the morning or after rest? [Yes, No]
+	[MC] Are you experiencing pain in your joints? [Yes, No]
+	[MC] Is the pain relieved by rest? [Yes, No]
+pregnancy
+	[Test] Presence of embryo/fetus [Ultrasound]
+	[Test] Elevated HCG level [Urine test]
+	[Test] Elevated HCG level [Blood test]
+	[MC] Do you have access to a home pregnancy test? [Yes, No]
+	[MC] Have you taken a home pregnancy test? [Yes, No]
+	[MC] What was the result of your home pregnancy test? [Positive, Negative]
+	[MS] Are you experiencing any of the following nasal related symptoms? [nosebleeds, congestion or nasal stuffiness, runny nose]
+	[MC] Are you experiencing a sensitivity to certain odors? [Yes, No]
+	[MC] Have you experienced increased urination? [Yes, No]
+	[MC] Have you noticed any light blood spotting? [Yes, No]
+	[MC] Are you experiencing any moodiness? [Yes, No]
+	[MC] Have you missed a period? [Yes, No]
+	[MC] Are your breasts tender or swollen? [Yes, No]
+	[MC] Are you experiencing any constipation? [Yes, No]
+	[MC] Have you experienced increased fatigue? [Yes, No]
+	[MC] Are you experiencing any cramping? [Yes, No]
+	[MC] Are you experiencing a change in your sense of taste? [Yes, No]
+	[MC] Are you experiencing any nasal congestion? [Yes, No]
+concussion
+	[Slider] How many days have you been experiencing these symptoms? [0, 365, 1]
+	[MC] How have the symptoms progressed? [Improved, Worsened, Stayed the same]
+	[MC] Are you having trouble with concentration or memory? [Yes, No]
+	[MC] Do you feel sensitive to light and/or noise? [Yes, No]
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+	[MC] Have you lost consciousness? [Yes, No, Not sure]
+	[Text] For how long?
+	[Text] Do you have an idea of what may have caused these symptoms?
+	[MS] Are you experiencing any of the following? [Headache, Feeling of pressure in the head, Confusion, Dizziness, Ringing in your ears, Fatigued, Slurred speech, No]
+cholecystitis
+	[MC] Do your symptoms worsen when you inspire? [Yes, No]
+	[MC] Have you felt nauseous or been vomiting? [Yes, No]
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[MS] Are you experiencing any of the following symptoms? [Severe pain in your upper right abdomen, Pain that radiates to your right shoulder or back, Tenderness when you touch your abdomen, None]
+conductive-hearing-loss
+	[MC] Do you hear ringing, roaring, or hissing sounds in your ears? [Yes, No]
+	[Test] Hearing Test
+	[MC] Do voices and sounds seem faint? [Yes, No]
+	[MC] Sorry to hear that you're not feeling well. Which ear is bothering you? [Left ear, Right ear, Both ears]
+	[MC] Are you experiencing vertigo? [Yes, No]
+	[MC] Are you experiencing pain in your ear(s)? [Yes, No]
+	[MC] Did your symptoms start suddenly or gradually? [Suddenly, Gradually]
+	[Text] Can you describe the pain?
+	[Slider] On a scale of 1 to 10, 10 being the worst pain you've ever experienced, how bad is the pain? [1, 10, 1]
+angina
+	[Text] Please list any previous heart complications you've had.
+	[MS] Are you experiencing any of these symptoms? [Nausea, Fatigue, Shortness of breath, Sweating, Dizziness, No]
+	[MC] Are you feeling chest pain or discomfort? [Yes, No]
+	[Text] How long have you been experiencing this pain?
+	[Text] Could you describe where the pain is and how it feels?
+	[MC] Is this chest pain accompanied by pain in your arms, neck, jaw, shoulder or back? [Yes, No]
+	[MC] Is the pain relieved by rest? [Yes, No]
+benign-prostatic-hyperplasia
+	[Test] Prostate-specific antigen (PSA)
+	[Test] Blood creatinine
+	[Test] Urinalysis
+	[MS] Are you experiencing any of the following? [Sudden urges to urinate, Weak urine flow, Dribbling after urination, Feeling that the bladder is not completely empty, None]
+	[MC] Are you having difficulty starting a urine stream? [Yes, No]
+	[MC] Do you urinate frequently? [Yes, No]
+	[MC] After urinating, do you feel the need to urinate again? [Yes, No]
+ear-wax-impaction
+	[MC] Have you ever or are you currently using any form of hearing aid? [Yes, No]
+	[MC] Have you experienced any dizziness or headaches recently? [Yes, No]
+	[Slider] Approximately how many hours do your headaches last? [1, 24, 1]
+	[MC] Have you noticed any unusual odor (possibly coming from your ears)? [Yes, No]
+	[Free Text] Can you describe the odor?
+	[MC] Have you noticed any discharge coming from either ear? [Yes, No]
+	[Free Text] Can you describe the color and texture of the discharge?
+	[Test] Heavy wax buildup [Otoscope]
+	[MC] Are you experiencing symptoms in one ear or both? [Left Ear, Right Ear, Both Ears]
+	[MC] Do you have a consistent earache or feel a heaviness in either ear? [Yes, No]
+	[MC] Have you noticed any ringing, buzzing, or high-pitched sounds recently? [Yes, No]
+	[MC] Do you use earphones that are placed inside the ear canal directly often? [Yes, No]
+	[MC] Have you noticed a temporary loss in your hearing? [Yes, No]
+	[MC] Do you use cotton swabs or other similar objects to clean your ear canals daily? [Yes, No]
+eustachian-tube-dysfunction-ear-disorder
+	[Test] Palpate neck for lymph nodes or masses
+	[Test] Anterior rhinoscopy [Nasal speculum, Otoscope]
+	[MC] Can you hear your own voice or breathing greatly amplified [Yes, No]
+	[MC] Do your symptoms fluctuate with time or head position? [Yes, No]
+	[Test] Ear examination [otoscope]
+	[MC] Have you had nasal discharge (mucus)? [Yes, No]
+	[Text] Can you describe its appearance?
+	[MC] Have you had any allergic symptoms, such as sneezing, itching, or running nose? [Yes, No]
+	[MC] Have you heard any ringing in your ears? [Yes, No]
+	[MC] Have you any pressure in your ears? [Yes, No]
+	[MC] Have you had any pain in your ears? [Yes, No]
+	[MC] Are these symptoms severe? [Yes, No]
+	[Test] Nasal endoscopy [flexible endoscope]
+	[MC] Have you been experiencing any loss of hearing? [Yes, No]
+	[Test] Distinguish conductive or sensorineural hearing loss [tuning fork]
+corneal-abrasion
+	[Text] Please list any previous eye problems including injuries and eye diseases.
+	[MC] Sorry to hear that you're not feeling well. Which eye is bothering you? [Left eye, Right eye, Both eyes]
+	[MC] Does it feel like there is something in your eye? [Yes, No]
+	[MS] Are you experiencing any of these symptoms? [Pain, Tearing, Redness, Sensitivity to light, Blurred vision or loss of vision, Headache]
+acute-otitis-media
+	[Test] Abnormal tympanic membrane [Otoscope]
+	[Text] Hi, sorry to hear you're not feeling well, but we'll do our best to figure out what is going on as soon as possible. In a few words, can you tell us what's been going on?
+	[MS] Ok, to clarify, can you check off any of the following symptoms that apply to you? [Ear pain, Redness in ear, Fluid coming out of the ear, Fever, Cough, Nasal congestion, Sore throat, Vomiting, None of the above]
+	[MC] Which ear is affected? [Left, Right, Both]
+	[Slider] How old are you? [0,120,1]
+	[MC] Does the child go to day care or pre-school? [Yes, No]
+	[Text] How long ago did these symptoms start?
+	[MC] Are you having trouble hearing? [Yes, No, Not sure]
+	[Slider] Can you be a bit more specific, how many months is the baby? [0,35,1]
+	[MS] Can you check off any of the following symptoms that are present? [Decreased hunger, Increased irritability (or crying more), Pulling at the ear, Not sleeping well, Other]
+	[Text] Please describe your child's symptoms.
+	[Text] Has this ever happened before? And if so, what worked then?
+	[Text] Can you think of any triggers that may have caused this to happen?
+	[MC] Since you first got sick, have the symptoms gotten better, worse, or stayed about the same? [Gotten better, Gotten worse, Stayed about the same]
+	[Text] Is there a time of the day or anything you do that makes the symptoms worse? If so, what?
+	[Text] Is there a time of the day or anything you do that makes the symptoms better? If so, what?
+	[Text] Please list out any medications you may have taken since you got sick.
+	[MC] Has anyone you live with been sick recently? [Yes, No, Not sure]
+	[Text] Can you list any other medical conditions you have?
+	[Text] Can you list any medications, vitamins, or supplements you take?
+	[MC] Have you taken the flu vaccine this year? [Yes, No, Not Sure]
+	[MC] Do you smoke tobacco, or have you ever smoked tobacco? [Yes I currently smoke, Yes but I quit, No]
+	[MC] Do/did you live with someone who frequently smokes indoors? [Yes, No]
+	[MC] How many packs do/did you smoke per day? [Less than 1 pack, 1 pack, 1-2 packs, 2+ packs]
+	[Slider] How many cigarettes did/do you smoke per day? [1, 25, 1]
+	[Text] How long did you live with them?
+	[Text] Please list all of the vaccinations you are up to date on.
+dental-caries
+	[MC] Are you experiencing bad breath or a bad taste in your mouth? [Yes, No]
+	[MC] Does it hurt to bite down on food? [Yes, No]
+	[MC] Is there brown, black or white staining on any surface of your teeth? [Yes, No]
+	[MC] Are there visible holes or pits in your teeth? [Yes, No, Not sure]
+	[MC] Do you have one or more toothaches? [Yes, No]
+	[MC] Are your teeth sensitive to sweet, hot or cold foods or drinks? [Yes, No]
+acute-pancreatitis
+	[MS] Are you currently taking any of the following medications? [steroids, anti-retrovirals]
+	[MC] Do you feel pressure on your bladder that causes you to urinate more frequently? [Yes, No]
+	[MC] Has it become more difficult to empty your bladder completely? [Yes, No]
+	[Test] ABG
+	[Test] Chem 7
+	[Test] CBC
+	[Test] Abdominal Ultrasound
+	[Test] Oxygen saturation [Pulse oximeter]
+	[Test] Weight [Scale]
+	[Test] Gallbladder involvement [ERCP]
+	[Slider] How old are you? [0,120,1]
+	[Test] Abnormal findings [MRI Abdomen]
+	[Test] Fever [Thermometer]
+	[Test] Abnormal BP [BP Cuff]
+	[Test] CBC, Amylase, Lipase, LDH, Bicarbonate, Triglycerides, AST, ALT, Albumin, Serum calcium, Glucose, BUN, Cr [Blood test]
+	[Test] Abnormal findings [Abdominal Ultrasound]
+	[Test] Abnormal findings [CT Abdomen]
+	[Text] Hi, sorry to hear you're not feeling well, but we'll do our best to figure out what is going on as soon as possible. In a few words, can you tell us what's been going on?
+	[MS] Ok, to clarify, can you check off any of the following symptoms that you might have? [Nausea, Vomiting, Loss of appetite, Fever, Chills, Difficulty breathing, none]
+	[Text] Please list any medical conditions you have or have had.
+	[MC] Do you drink alcohol? [Yes, No]
+	[Text] What do you eat in an average day?
+	[MC] Have you experienced any changes in your bowel movements, regarding frequency, consistency, appearance, etc? [Yes, No]
+	[Text] Please list any surgeries or other procedures you have had.
+	[Text] How long have you been ill for?
+	[Text] Please list any medications, vitamins, or other supplements you take.
+	[MC] Do you smoke tobacco or have you smoked tobacco in the past? [Yes but I quit, Yes I still smoke, No]
+	[MC] Have you noticed any bruising on your skin? Please take a look at your belly button and lower back in particular. [Yes, No]
+	[MC] Have there been any changes in your urine, regarding frequency, color, and/or ease of urinating? [Yes, No]
+	[Text] What changes have you noticed?
+	[Text] Please describe the location and appearance of the bruise(s).
+	[MC] Ok, now, try to find this point on yourself  (show picture of xiphoid process), and press down just below it. Is it painful to do this? [Yes, No]
+	[Slider] On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? [1,10,1]
+	[MC] Have you ever lived with someone who frequently smoked indoors? [Yes, No]
+	[MC] That's great! When did you quit? [This month, this year, 1-5 years ago, 5-10 years ago, >10 years ago]
+	[MC] How many packs do/did you smoke per day? [Less than 1 pack, 1 pack, 1-2 packs, 2+ packs]
+	[MC] How many years did you live with them? (Less than 1, 1-3, 3-5, 5-10, 10+]
+	[MC] Since you first felt sick, have your symptoms gotten better, worse, or stayed about the same? [Gotten better, Gotten worse, Stayed about the same]
+	[MC] Is there anything you do or a time of the day when your symptoms are worse? [Yes, No]
+	[MC] Is there anything you do or a time of the day when your symptoms are better? [Yes, No]
+	[Text] What makes your symptoms feel better?
+	[MC] Have you tried taking any medications since getting sick? [Yes, No]
+	[Text] What  medication(s) have you tried?
+	[Slider] We are now going to check your breathing. Are you near a clock? Try to count how many times you breathe in 30 seconds. Keep breathing as you would normally! [1,40,1]
+	[Slider] Good work! Now let's try to measure your pulse. You should be able to find this on your upper wrist. This picture might help you locate it. Got it? Great! Now, try to count how many times you feel your pulse in 30 seconds. Ready, set, go! [5,100,1]
+	[Text] What causes your symptoms to feel worse?
+	[Text] What changes have you noticed?
+	[Slider] On average, how many days per week do you drink? [1, 7, 1]
+	[Slider] How many drinks do you have on an average day when you drink? [1, 30, 1]
+	[Test] Abdominal CT with contrast
+	[Test] serum lipase
+	[Test] serum amylase
+	[MS] Do you have any of the following symptoms? [nausea, vomiting, bloating, dizziness, fainting spells, fever, rapid heart beat, no]
+	[MC] Do you have a history of gall stones? [Yes, No]
+	[MC] Have you had any gall bladder procedures? Examples include: ERCP and cholecystectomy (surgical removal of gall bladder) [Yes, No]
+	[Text] What gall bladder procedure did you have?
+	[MC] Do you consume alcohol? [Yes, No]
+	[Slider] On average, how many days per week do you consume alcohol? [1, 7,1]
+	[Slider] When you do consume alcohol, how many drinks do you consume during an average day of drinking? [1,30,1]
+	[MC] Are you feeling abdominal pain? [Yes, No]
+	[MC] Does it feel like there is a knife in your abdomen causing you pain? [Yes, No]
+	[MC] Does the pain move? [Yes, No]
+	[Slider] How long ago (in days) did the pain begin? [0,365,1]
+	[Slider] On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? [1,10,1]
+	[Text] Where is the pain?
+	[Text] Where does the pain move to and from?
+	[Text] Can you describe your pain?
+gout
+	[MC] Do you have pain, redness, and/or swelling around a joint? [Yes, No]
+	[MC] Do you have a visible lesion at the affected joint? [Yes, No]
+	[Slider] On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? [1,10,1]
+	[MC] Are you unable to use that joint? [Yes, No]
+	[Test] Hyperuricemia
+	[Test] Arthrocentesis
+acute-bronchitis
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills or feeling unusually hot/feverish recently? [Yes, No]
+	[Test] Fever [Thermometer]
+	[Test] Chest X Ray for bacterial pneumonia
+	[Test] CBC
+	[Test] Serum for elevated procalcitonin
+	[Slider] What is your age in years? [1, 120, 1]
+	[MC] Have you recently taken antibiotics? [Yes, No]
+	Have you taken the course to completion? [Yes, No]
+	[Test] Pulse rate
+	[Test] Rhonchi, decreased breath sounds, or rales on auscultation [Stethoscope]
+	[MC] Is this during flu season (winter months)? [Yes, No]
+	[MC] Do you have a cough? [Yes, No]
+	[Slider] How many weeks have you had this cough? [1, 50, 1]
+	[MC] Does your cough produce saliva and/or mucus? [Yes, No]
+	[MC] Have you been tested for chronic bronchitis? [Yes, No]
+	[MS] Can you describe what it looks like? Check all that apply. [Clear and thin, Milky white, Milky yellow, Green, Bubbly, Currant jelly-like, Rust-color, Dark brown, Blood (or red) flecks, Pink and frothy]
+venous-insufficiency
+	[MC] Have you noticed the pain in your legs decrease once you have elevated them? [Yes, No]
+	[Slider] About how many hours a day do you spend sitting/inactive? [1, 24, 1]
+	[MC] Have you had a history of blood clots? [Yes. No]
+	[Test] Vascular Ultrasound
+	[MC] Have you noticed any change in the color or appearance of your legs? [Yes, No]
+	[MC] Do you experience tiredness or aching of your legs after minimal physical activity? [Yes, No]
+	[MC] Have you experienced any swelling or edema in your lower extremities? [Yes, No]
+	[MC] Do you have any visible varicose (spider) veins on your lower extremities? [Yes, No]
+	[Free Text] Describe the varicose veins (location, size, color)
+psychotic-disorder
+	[MC] Are you experiencing feelings of depression or anxiety? [Yes, No]
+	[MC] Since you've been feeling this way, have you had suicidal thoughts? [Yes, No]
+	[MC] Do you jump from topic to topic when you speak? [Yes, No]
+	[MC] Are you feeling suspicious or jealous of others? [Yes, No]
+	[MC] Are you experiencing changes in mood? [Yes, No, Not sure]
+	[Text] Could you please be more specific about these changes?
+	[MC] Are you having difficulty concentrating? [Yes, No, Not sure]
+	[MC] Are you experiencing hallucinations? [Yes, No, Not sure]
+gastroesophageal-reflux-disease-gerd
+	[MC] Do you have a history of scleroderma? [Yes,No]
+	[MC] Do you have a history of hiatal hernias? [Yes, No]
+	[MC] Are you pregnant? [Yes, No]
+	[MC] Do you have diabetes? [Yes, No]
+	[MS] Have you experienced any of the following? [Chest pain, feeling of lump in your throat, difficulty swallowing, burning sensation in throat or chest, regurgitation of sour/acidic tasting liquid, no]
+	[MC] How often do you consume greasy or spicy foods? [Almost never, Once a week, a few times per week, every day, multiple times per day]
+	[MC] Are symptoms worsened upon eating "greasy or spicy" foods? [Yes, No, Not Sure]
+	[MC] Do you smoke tobacco, or have you ever smoked tobacco? [Yes I currently smoke, Yes but I quit, No]
+	[MC] Do/did you live with someone who frequently smoked indoors? [Yes, No]
+	[MC] How long ago did you quit smoking? [Less than one month ago, 1 year ago, 2-5 years ago, 5-10 years ago, 10+ years ago]
+	[MC] How many packs do/did you smoke per day? [Less than 1 pack, 1 pack, 1-2 packs, 2+ packs]
+	[Text] How long did you live with them?
+	[MC] Are symptoms worsened upon laying down? [Yes, No, Not Sure]
+	[Test] Acid pH probe via catheter
+	[Test] Endoscopy of upper GI
+	[Test] X-Ray of upper GI
+diabetic-peripheral-neuropathy
+	[MC] Are you experiencing numbness in your feet and/or legs? [Yes, No]
+	[MC] Have you been diagnosed with diabetes? [Yes, No]
+	[MC] Are your symptoms worse at night? [Yes, No, Not sure]
+	[MC] Have you been feeling weak? [Yes, No]
+	[MC] Are you having problems with your feet? This may include ulcers, infections, deformities, or bone and joint pain. [Yes, No]
+	[Text] Could you please be more specific?
+	[MC] Are you having trouble with balance and coordination? [Yes, No]
+	[MC] Have you lost reflexes in your ankles? [Yes, No, Not sure]
+	[MC] Have you had an increased sensitivity to touch? [Yes, No]
+	[MC] Do you feel a burning sensation in your extremities? [Yes, No]
+	[MC] Has it become harder to sense pain or temperature changes? [Yes, No, Not sure]
+	[MC] Are you experiencing numbness in your fingers and/or arms? [Yes, No]
+otitis-externa-swimmer-s-ear
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]
+	[Slider] How many days have you been experiencing these symptoms? [1, 365, 1]
+	[MC] Are you having trouble hearing? [Yes, No]
+	[MC] Is your throat swollen or sore? [Yes, No]
+	[MC] Do you feel tenderness when you move your ear or jaw? [Yes, No]
+	[MS] Are you experiencing any of the following around your ear or ear canal? [Pain, Itching or irritation, Redness and swelling, Pressure, Peeling of skin, Discharge (water or pus-like), No]
+seasonal-allergies-hay-fever
+	[Test] [Blood Test]
+	[Test] [Skin Prick Test]
+	[MC] Have you experienced any shortness of breath or any breathing issues along with your other symptoms [Yes, No]
+	[MC] Do you live in an area with a high pollen count? [Yes, No]
+	[MC] Do you have any known allergies? [Yes, No]
+	[Text] What allergies do you have?
+	[Text] What symptoms are you currently experiencing?
+	[MC] Do you experience these symptoms year-round, or just during certain months? [year-round, certain months]
+	[MS] Which season(s) of the year do you experience your symptoms? Select all that apply. [Spring, Summer, Fall, Winter]
+	[Slider] Approximately how many hours per day do you spend outdoors? [1, 24, 1]
+conjunctivitis
+	[MC] Do you wear prescription contacts for vision? [Yes, No]
+	[Free Text] How often to do replace your contacts with a new pair?
+	[MC] Have you recently tried a new skincare or makeup product on the face, specifically around the eye area? [Yes, No]
+	[MC] Have you been in close contact with anyone (family, friend, coworker, etc) who has been diagnosed with conjunctivitis (also known as "pink eye") within the past two weeks? [Yes, Np]
+	[MC] Have you swam in a public body of water within the past 2 weeks? [Yes, No]
+	[MC] Have you experienced blurred vision that is out of the normal? [Yes, No]
+	[MC] Have you experienced an overproduction of tears? [Yes, No]
+	[MC] Have you experienced any itchiness in your eyes within the past week? [Yes, No]
+	[MC] Are your symptoms seen in one eye or both? [Left Only, Right, Only, Both]
+	[MC] Have you noticed any redness in the whites of either eye? [Yes, No]
+	[Test] Have you experienced any discharge or fluid from your eyes? [Yes, No]
+	[Free Text] Describe the color/consistency of the discharge
+	[Test] Positive for bacteria or viruses in eye secretions [Laboratory Analysis]
+	[Test] Positive allergy test [Allergy Test]
+appendicitis
+	[MC] Do you have access to a thermometer? [Yes, No]
+	[MC] Have you been experiencing chills and/or feeling unusually hot/feverish? [Yes, No]
+	[Slider] What is your current temperature? [90,110, .1]
+	[MC] Are you experiencing any pain? [Yes, No]
+	[MC] Please apply gentle pressure to the painful area, then quickly release the pressure. Does the pain get worse when you do this? [Yes, No]
+	[MC] Has your pain moved? [Yes, No]
+	[Text] Where is your pain located?
+	[Slider] On a scale of 1 to 10, 1 being very little pain and 10 being the worst pain you have ever felt, how bad is the pain? [1,10,1]
+	[MC] Is the pain worsened by walking, coughing, or other movement? [Yes, No]
+	[Test] Enlarged Appendix [CT Scan]
+	[Test] Enlarged Appendix [Abdominal Ultra-Sound]
+	[Test] Enlarged appendix [Abdominal X-Ray]
+	[Test] Elevated white blood cell count [Blood test]
+	[MC] Are you pregnant? [Yes, No]
+	[MC] Are you bloated? [Yes, No]
+	[MC] Are you constipated? [Yes, No]
+	[MC] Do you have a decreased appetite? [Yes, No]
+	[MC] Are you experiencing diarrhea? [Yes, No]
+	[MC] Are you experiencing nausea? [Yes, No]
+actinic-keratosis
+	[Slider] Approximately how many hours do you spend outside daily, specifically exposed to the sun? [1, 24, 1]
+	[Text] Can you list of any other medical conditions you might have?
+	[MC] Have you experienced any newfound itchiness? [Yes, No]
+	[Text] Where have you experienced the itchiness?
+	[MC] Have you noticed a change in the dryness or scaliness of your skin within the past 4 weeks? [Yes-Dry, Yes-Scaly, Yes-both, No]
+	[MC] Do you have any bumps/lumps on the skin that have arisen without injury? [Yes, No]
+	[Free Text] Can you describe the feel, shape, location,  and sie of this bump?
+	[MC} Do you have any noticeable skin lesions?[Yes, No]
+	[MC] Do you wear sunscreen when you are exposed to the sun? [Yes, No]
+	[MC] How would you rate your UV exposure (time in the sun or at a tanning salon)? [Very high, High, Medium, Low]
+	[Text] Do you have a history of any sexually transmitted infections, and if so, which ones? Please also write down if you received treatment.
+	[MC] Have you had unprotected sex (anal, oral, or vaginal) since the last time you were checked for sexually transmitted infections (or ever, if you've never been tested for sexually transmitted infections)? [Yes, No, Not sure]
+	[Test] Positive findings [Dermoscopy]
+	[Test] Positive findings [Shave or punch biopsy]
+	[Slider] How old are you? [0,120,1]
+	[Text] Can you list out any medications, vitamins, or supplements you take?
+	[Text] Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe what you noticed on your skin?
+	[Text] How long along did you first notice this?
+	[Media] Can you mark where you noticed the your skin looks different?
+	[Slider] On a scale of 0 - 10 with 0 meaning no pain, and 10 meaning the worst pain you can imagine, how would you rate your pain? [0,10,1]
+	[MC] Since you first noticed it, has it gotten better, worse (or bigger), or stayed about the same? [It has gotten better, It has gotten worse, It has stayed about the same, Not sure]
+	[Text] Can you think of anything that makes this worse?
+	[Text] Can you think of anything that makes this better?
+	[MC] Can you take another look at the skin on your body, and check if you notice other such patches of skin? [Yes I found more, No I did not find more, Not sure]
+	[Text] Can you describe how this feels? For example, is it itchy, does it burn, does it feel warm?
+	[Text] How big is each patch of skin?
+	[Text] What color is your skin in this area?
+	[Text] How does the area just next to this patch look?
+	[MC] Is there any smell coming from this (these) area(s)? [Yes it smells awful, No there's no particular smell, Not sure]
+	[MS] Do any of the following describe these patches of skin? Check all that apply. [Dry, Sandpapery, Peeling, Rough, Scaly, Thick, No]
+	[Text] Is there any fluid coming out the this area? If so, can you describe it? For example, is it watery, oily, sticky, green, yellow, bloody?
+	[MC] Is there a horn that comes out of this area? An example is shown below. [Yes, No]
+	[MC] Have you noticed any warts? [Yes, No, Not sure]
+	[MC] Have you noticed any ulcers in this area? [Yes, No]
+	[Test] Diameter [Measuring tape]
+subconjunctival-hemorrhage
+	[MC] Are you experiencing any eye discomfort? [yes, no, not sure
+	[MC] Is there any discharge or excessive fluid coming out of your eye? [yes, no]
+	[MC] Are you experiencing any eye pain? [yes, no]
+	[MC] Are you experiencing any change in your vision? [yes, no]
+	[MC] Is there a bright red patch of blood on the white portion of your eye? [yes, no]
+colorectal-cancer
+	[MC] Have you had any difficulty or pain when passing stool? [Yes, No]
+	[MC] Have you had any nausea or vomiting? [Yes, No]
+	[Test] Colonoscopy
+	[Test] Abdominal exam
+	[MC] Has your stool been different than usual, either in color, consistency, and/or smell? [Yes, No]
+	[MC] Has your stool been black recently? Or at least darker than usual? [Yes, No]
+	[MC] Have you noticed blood in your stool? [Yes, No]
+	[Text] Has your stool been different in any other ways?
+	[MC] Have you been feeling more tired than you usually do? [Yes, No]
+	[Test] Complete blood count
+	[Test] Fecal occult blood test [Stool guaiac test]
+	[MC] Have you noticed blood on the toilet paper after bowel movements? [Yes, No]
+	[Test] Digital rectal exam [Exam gloves]
+	[MC] Have you had any pain in your abdomen? [Yes, No]
+	[Text] Can you describe the quality of the pain?
+	[Text] Where is the pain located?
+	[MC] Have you had any abnormal findings on your regular screening colonoscopy? [Yes, No]
+diabetic-retinopathy
+	[Test] Eye exam
+	[Test] Glucose levels
+	[MC] Are there dark or empty spots in your vision? [Yes, No]
+	[MC] Are you having trouble seeing colors? [Yes, No]
+	[MC] Do you have blurred vision? [Yes, No]
+	[MC] Do you see spots or dark strings floating in your vision (also called floaters)? [Yes, No]
+	[MC] Have you been diagnosed with diabetes? [Yes, No]
+dry-eye-of-unknown-cause
+	[Test] Schirmer's Tear Test
+	[Free Text] Are you currently suffering from any medical condition?
+	[Test] Eye Exam
+	[MC] Have you noticed yourself experiencing cloudy vision or spotty vision? [Yes, No]
+	[MC] Have you noticed yourself seeing double? [Yes, No]
+	[MC] Have you noticed redness within the whites of your eyes? [Yes, No]
+	[MC] Have you experienced itchiness sensations in either eye? [Yes, No]
+	[MC] Have you experienced any unusual fluid release or discharge from your eyes? [Yes, No]
+	[Free Text] Can you describe the color and texture of this discharge?
+	[MC] Have you experienced pain in your eyes recently? [Yes, No]
+	[Slider] On a scale from 1-10, how would you rate this pain? [1, 10, 1]
+	[MC] Have you experienced a decrease in the production of tears recently? [Yes. No]
+	[MC] When exposed to sunlight, do you consistently wear sunglasses? [Yes, No]
+	[MC] Do you wear prescription eyeglasses or contacts? [Yes - glasses, Yes, contacts, Yes - both, No]
+	[MC] Have you experienced a temporary loss in vision and/or blurry vision? [Yes. No]
+	[Slider] Approximately how many days have you experienced this change? [1, 60, 1]
+strep-throat
+	[Text] Do you have a history of any medical conditions?
+	[Text] Do you have a history of any surgeries?
+	[Text] Can you list any medications, vitamins, or supplements you take?
+	[Text] Do you have any allergies? Which ones?
+	[Test] Positive culture [Throat culture]
+	[Test] Swollen tonsils with white exudate [Tongue depressor]
+	[Test] Elevated temperature [Thermometer]
+	[Slider] How old are you? [0,120,1]
+	[Text] Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe what's bothering you?
+	[MS] Okay, just to clarify, can you check off any of the following symptoms that you have? [Sore throat, Fever, Cough, Headache, Vomiting, Earache, Nasal congestion (stuffy nose), Trouble swallowing, Rash, Body ache, Decreased appetite, Chills]
+	[MC] Use your hands to feel under your chin and around your neck. Do you feel any lumps? [Yes, No, Not sure]
+	[MS] Can you check off any of the following symptoms you have? [Red eyes, Hoarse voice, Ulcers in your mouth]
+	[MC] Do you notice small red spots on the inside of your mouth? [Yes, No, Not sure]
+	[Text] Can you describe what the rash looks like?
+	[Text] How long have you had these symptoms for?
+	[MC] Since you first got sick, have your symptoms gotten worse, better, or stayed about the same? [Better, Worse, Stayed about the same]
+	[Text] Can you think of a trigger around when you first got sick? For example, has anyone around you been sick or had strep throat?
+	[Text] Is there anything you have tried taking, or a time of the day when your symptoms are better?
+	[Text] Is there anything you do or a time of the day when your symptoms are worse?
+	[MC] Has this ever happened to you before? [Yes, No, Not sure]
+carpal-tunnel-syndrome
+	[MC] Are your symptoms relieved by shaking your wrist? [Yes, No]
+	[MC] Are your symptoms worse at night? [Yes, No]
+	[MC] Are you feeling weakness in your fingers or hands? [Yes, No]
+	[MC] Are you feeling tingling or numbness in your fingers or hands? [Yes, No]
+	[Text] Where specifically are you experiencing these symptoms?
+kidney-stone
+	[MC] Do you occasionally feel sharp pain that radiates to your groin? [yes, no]
+	[MC] Do you feel sharp pain that radiates to your groin? [yes, no]
+	[MC] Do you feel lower back pain? [yes, no]
+	[Test] Positive result [hematuria]
+	[MC] Is there blood in your urine? [yes, no]
+	[MC] Do you feel lower back pain? [yes, no]
+	[Test] positive result [hematuria]
+tuberculosis
+	[Test] Palpate lymph nodes
+	[MC] Have you noticed any weight loss recently? [Yes, No]
+	[MC] Have you been experiencing night sweats? [Yes, No]
+	[Test] PPD
+	[Test] CBC and differential
+	[Test] Lung Sounds [Stethoscope]
+	[Test] Heart sounds [Stethoscope]
+	[Test] Percuss abdomen [Stethoscope]
+	[MC] Have you had any exposure to anyone with Tuberculosis? [Yes, No]
+	[Text] Where and when was this exposure?
+	[MC] Have you felt sharp chest pain? [Yes, No]
+	[MC] Is it worse when you breathe, cough, and/or sneeze? [Yes, No]
+	[Test] Fever [thermometer]
+	[MC] Sorry to hear you are not feeling well! How long have these symptoms been going on for? [Less than 2 weeks, 2 - 4 weeks, more than 4 weeks]
+	[Slider] Can you be more specific? Approximately how many days have you had these symptoms? [1,14,1]
+	[Test] Oxygen saturation [Pulse oximeter]
+	[Text] Which countries and US states have you travelled to during the past 18 months?
+	[MC] Have you been having trouble breathing? [Yes, No]
+	[MC] Do you have a history of HIV or AIDS? We know this is can be a very private topic, but everything you share is completely confidential, and only your doctor will see what you write. [Yes HIV+, Yes AIDS, No]
+	[MC] Are you a user of intravenous drugs, and/or are you regularly unable to go to the doctor when needed? [Yes, No]
+	[MC] Do you have community acquired pneumonia that has not improved on 7 days of treatment? [Yes, No]
+	[MC] Have you had a cough for at least 2-3 weeks and at least one additional symptom (fever, hemoptysis, night sweats, weight loss)? [Yes, No]
+	[MC] Have you recently been exposed to tuberculosis, previously had tuberculosis, and/or traveled to a foreign country in the past 18 months? ? [Yes, No]
+	[MC] Do you have an unexplained cough and/or fever? [Yes, No]
+	[Test] Collect 3 sputum specimens
+	[Test] Chest Xray
+	[Test] 1x NAA Test
+	[Test] 3x Culture
+	[Test] 3x AFB smear microscopy
+	[MC] Are you a user of intravenous drugs, and/or are you unable to go to the doctor when needed? [Yes, No]
+acne
+	[Test] Positive findings [Skin excision, pathology]
+	[Test] Elevated temperature [Thermometer]
+	[Text] Do you have any other medical conditions? If so, which ones?
+	[Text] Which (if any) medications, vitamins, or supplements are you currently taking?
+	[MC] Have you ever had any sexually transmitted infections? [Yes, No]
+	[MC] Have you had unprotected sex (this includes anal, oral, or vaginal sex) since you have been tested (or ever, if you have never been tested) for sexually transmitted infections? [Yes, No, Not sure]
+	[Text] Which ones? Please write whether or not you have been treated for these.
+	[MC] Since it started, has it gotten worse, better, or stayed about the same? [Gotten worse, Gotten better, Stayed about the same]
+	[MC] Does anything make the acne worse? [Yes, No]
+	[MC] Does anything make the acne better? [Yes, No]
+	[Text] What have you noticed makes the acne better?
+	[Text] What have you noticed makes the acne worse?
+	[Text] Hi, we're sorry to hear something's wrong, but we will do our best to figure out what's going on. In a few words, can you describe what's bothering you?
+	[Media] Can you mark where on your skin this is?
+	[MC] Have you noticed any swelling of your skin around this area? [Yes, No, Not sure]
+	[MC] Can you try to describe the spots on your skin? Check off all of the following which describe them. [Scaly red skin, Blackheads, Whiteheads, Scabs or scars]
+	[MC] Can you tell us how big each spot is? [Pinhead size, Pimple size (or tip of a pen), Small seed (or 1/2 centimeter)]
+	[Slider] On a scale of 0 to 10 with 0 meaning no pain, and 10 meaning the worst pain imaginable, how much pain are you in right now? [0,10,1]
+	[Text] Can you describe if any fluid is coming out of these spots, and, if so, what that fluid looks like. For example, is it sticky, watery, oily? What color is it? Is there blood?
+	[Text] Do you have any moles near the acne, and if so, how many do you have?
+	[MC] Have there been any changes in the shampoo or soap you regularly use? [Yes change in shampoo, Yes change in soap, Yes change in shampoo and soap, No]
+	[MC] Have you been losing more hair than usual? [Yes, No, Not sure]
+	[MC] Have you noticed that your skin has been drier than usual? [Yes it is drier, No it is about the same]
+	[MC] Can you check off all of the following (if any) that apply? [My skin has been peeling more than usual, My skin has been scaly lately, My skin has been rougher lately, None of these apply]
+herniated-disc
+	[MC] Have you had any trouble emptying your bladder, loss of sensation in the area of your buttocks/inner thigh, or pain/numbness/loss of sensation on both sides of your body? [Yes, No]
+	[Test] Neuroimaging [MRI]
+	[Test] Straight leg raise: lay flat on your back, have someone raise your relaxed and straightened leg through about 30-60 degrees; stop if you experience pain.
+	[MC] Do you have pain going down your non-raised leg from your lower back? [Yes, No]
+	[MC] Do you have pain going down your raised leg from your lower back? [Yes, No]
+	[Test] Sensory exam
+	[Test] Reflexes [Reflex hammer]
+	[MC] Have you experienced any numbness? [Yes, No]
+	[MC] Have you experienced a tingling "pins and needles" sensation? [Yes, No]
+	[MC] Do you have any loss of sensation? [Yes, No]
+	[Text] Where have you lost sensation?
+	[MC] Do you have low back pain? [Yes, No]
+	[MC] Does the pain radiate elsewhere? [Yes, No]
+	[Text] Can you describe the quality of the pain?
+	[Text] Where does the pain go?
+pyelonephritis
+	[MC] Is your urine cloudy and/or foul-smelling? [Yes, No]
+	[MC] Do you feel tenderness when you press on the area of your back overlaying the kidneys? [Yes, No, Not sure]
+	[MC] Do you have a history of kidney stones? [Yes, No]
+	[MC] Is there blood in your urine? [Yes, No]
+	[MC] Are you experiencing frequent, painful urination? [Yes, No]
+	[Test] CT Scan or Ultrasound of the urinary tract
+	[Test] Urine culture
+	[Test] Urinanalysis to rule out infection
+	[MC] Are you experiencing any back, side, or groin pain? [Yes, No]
+	[Slider] How long ago (in days) did the pain begin? [0,365,1]
+	[MC] Are you experiencing chills? [Yes, No, Not sure]
+	[MC] Are you experiencing nausea or vomiting? [Yes, No]
+	[MC] Do you have a thermometer available to measure your temperature? [Yes, No]
+	[MC] Have you been experiencing chills, or feeling feverish or unusually hot? [Yes, No]
+	[Test] Fever [thermometer]

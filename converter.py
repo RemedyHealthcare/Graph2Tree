@@ -17,7 +17,7 @@ questions = {}
 question_bank = {}
 print_database = False
 print_form = True
-num_helpers = 3
+num_helpers = 4
 
 for i in range(len(graph['nodes'])):
     node = graph['nodes'][i]
@@ -371,12 +371,30 @@ if print_form:
         for question_id in question_ids:
             question = questions[question_id]
             outfile.write(('*'+question_id + '\n').encode('utf8'))
-            outfile.write((question['question_type'] + ' ' + question['text'] + '\n').encode('utf8'))
+            outfile.write('-' + (question['question_type'] + ' ' + question['text'] + '\n').encode('utf8'))
             if question['question_type'] == 'button':
                 for answer in json.loads(question['answer_choices']):
                     outfile.write(('~ ' + answer.strip() + '\n').encode('utf8'))
         outfile.close()
         
+
+current_question_id = ''
+current_doc_display_choices = []
+doc_display_lines = open('questions_with_doc_display.txt', 'rb').readlines()
+for line in doc_display_lines:
+    if line[0] == '*':
+        if current_question_id != '':
+            questions[current_question_id]['doctor_display_choices'] = current_doc_display_choices
+        current_doc_display_choices = []
+        current_question_id = line[1:].replace('\n', '')
+    elif line[0] == '-':
+        pass
+    elif line[0] == '~':
+        pass
+    else:
+        current_doc_display_choices += [line.replace('\n','')]
+        
+
 
 
 '''
