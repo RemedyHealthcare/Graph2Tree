@@ -2,7 +2,8 @@ import json
 import numpy
 import redis, os
 import cPickle as pickle
-
+from elasticsearch import Elasticsearch
+import BeautifulSoup
 graph_file = open('graph.json', 'rb')
 graph = json.loads(graph_file.read())
 
@@ -270,6 +271,9 @@ def get_target_index(source_id, edge):
         
         
     return answer_label
+
+
+
 '''
 for id in id_is_root.keys():
     if id_is_root[id]:
@@ -321,6 +325,24 @@ def make_condition_name(condition):
 symcat_to_disease_id = pickle.load(open('symcat_to_remedy_id.p', 'rb'))
 
 
+
+current_question_id = ''
+current_doc_display_choices = []
+doc_display_lines = open('questions_with_doc_display.txt', 'rb').readlines()
+for line in doc_display_lines:
+    if line[0] == '*':
+        if current_question_id != '':
+            questions[current_question_id]['doctor_display_choices'] = json.dumps(current_doc_display_choices)
+        current_doc_display_choices = []
+        current_question_id = line[1:].replace('\n', '')
+    elif line[0] == '-':
+        pass
+    elif line[0] == '~':
+        pass
+    else:
+        current_doc_display_choices += [line.replace('\n','')]
+
+
 for condition in question_bank:
     questions_ids = question_bank[condition]
     for question_id in questions_ids:
@@ -329,7 +351,9 @@ for condition in question_bank:
             r.set('question:' + question_id + ':text', question['text'])
             r.set('question:' + question_id + ':question_type', question['question_type'])
             if 'answer_choices' in question.keys():
-                r.set('question:' + question_id + ':answer_choices', question['answer_choices']) 
+                r.set('question:' + question_id + ':answer_choices', question['answer_choices'])
+            if 'doctor_display_choices' in question.keys():
+                r.set('question:' + question_id + ':doctor_display_choices', question['doctor_display_choices'])
         else:
             print('NO QUESTION FOR: ' + question_id)
     symcat_to_remedy_id = pickle.load(open('symcat_to_remedy_id.p', 'rb'))
@@ -378,24 +402,48 @@ if print_form:
         outfile.close()
         
 
-current_question_id = ''
-current_doc_display_choices = []
-doc_display_lines = open('questions_with_doc_display.txt', 'rb').readlines()
-for line in doc_display_lines:
-    if line[0] == '*':
-        if current_question_id != '':
-            questions[current_question_id]['doctor_display_choices'] = current_doc_display_choices
-        current_doc_display_choices = []
-        current_question_id = line[1:].replace('\n', '')
-    elif line[0] == '-':
-        pass
-    elif line[0] == '~':
-        pass
+
+es_host = os.getenv('ELASTICSEARCH_HOST', 'localhost:9200')
+es_auth = os.getenv('ELASTICSEARCH_AUTH', None)
+
+if es_host != 'localhost:9200':
+    es_host = 'https://' + es_host
+
+es_http_auth = None
+if es_auth is not None:
+    es_http_auth = (es_auth.split(':')[0], es_auth.split(':')[1])
+
+es = Elasticsearch(
+                    [es_host],
+                        http_auth=es_http_auth,
+                        )
+print("populating elasticsearch")
+try:
+    es.indices.delete("condition")
+    es.indices.create("condition")
+except:
+    print "indices don't exist yet"
+    es.indices.create("condition")
+
+symcat = pickle.load(open('symcat_scrape.p', 'rb'))
+#print(symcat['conditions'].keys())
+for condition_id in question_bank:
+    #remedy_id = symcat_to_remedy_id[condition_id]
+    condition_questions = question_bank[condition_id]
+    question_text = []
+    #print('Populating ES for ' + condition_id)
+    if condition_id in symcat['conditions'].keys():
+        for q_id in condition_questions:
+            question_text += [questions[q_id]['text']]
+        doc_body = {
+                'conditionId' : remedy_id,
+                'name' : symcat['conditions'][condition_id]['name'],
+                'description' : symcat['conditions'][condition_id]['description'],
+                'questions' : question_text
+                }
+        es.index(index = "condition", doc_type = "v0", body = doc_body)
     else:
-        current_doc_display_choices += [line.replace('\n','')]
-        
-
-
+        print('Failed to populate ES for ' + condition_id)
 
 '''
 id2condition = {}
